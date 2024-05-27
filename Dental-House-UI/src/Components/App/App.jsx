@@ -1,10 +1,12 @@
 import React from 'react'
-import Header from '../Header/Header'
+import Header2 from '../Header/Header2'
+import Landingpage from '../LandingPage/Landingpage'
 
 const App = () => {
   return (
     <>
-     <Header/>
+     <Header2/>
+     <Landingpage/>
     </>
      
   )
