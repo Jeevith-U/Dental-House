@@ -9,23 +9,14 @@ const Landingpage = () => {
             <h1 className="text-5xl font-medium mb-4">Dr. Varsha Gupta</h1>
             <p className="text-xl font-medium mb-2">DENTIST</p>
             <p className="mb-6">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Eligendi, quod illo porro nulla id eaque vitae, obcaecati atque
-              nam odio laboriosam vero numquam vel! Harum nam cupiditate facilis
-              natus dignissimos nesciunt illo, a nobis dicta facere libero,
-              voluptate adipisci debitis qui maxime beatae sint quaerat ipsa
-              magnam dolorum quibusdam modi!
+            I am Dr. Varsha a dedicated and compassionate dental surgeon with exceptional skill and passion in dentistry. I bring a wealth of expertise to her practice, specializing in enhancing smiles with advanced cosmetic treatments. I also have a heartfelt interest in pediatric dentistry, where my gentle approach ensures that children feel comfortable and cared for during their dental visits, fostering a positive attitude toward oral health from an early age.
             </p>
           </div>
           <div className="px-4 py-2">
             <p className="text-xl font-medium mb-2">QUALIFICATION</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Eligendi, quod illo porro nulla id eaque vitae, obcaecati atque
-              nam odio laboriosam vero numquam vel! Harum nam cupiditate facilis
-              natus dignissimos nesciunt illo, a nobis dicta facere libero,
-              voluptate adipisci debitis qui maxime beatae sint quaerat ipsa
-              magnam dolorum quibusdam modi!
+            I have completed dental surgeon with a Bachelor of Dental Surgery (BDS) degree and a prestigious fellowship in aesthetic and cosmetic dentistry.
+            I am specialized in all the basic & latest dental procedures including dental implants, teeth whitening, porcelain veneers, smile corrections, gap closures, fixed teeth, root canal treatment, gum surgery, braces, kids dentistry, laser dentistry, gummy smile correction metal free 
             </p>
           </div>
         </div>
