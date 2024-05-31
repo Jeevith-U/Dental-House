@@ -7,16 +7,15 @@ const Landingpage = () => {
         <div className="w-3/5">
           <div className="px-4 py-2">
             <h1 className="text-5xl font-medium mb-4">Dr. Varsha Gupta</h1>
-            <p className="text-xl font-medium mb-2">DENTIST</p>
+            <p className="text-xl font-medium mb-2">About Us</p>
             <p className="mb-6">
-            I am Dr. Varsha a dedicated and compassionate dental surgeon with exceptional skill and passion in dentistry. I bring a wealth of expertise to her practice, specializing in enhancing smiles with advanced cosmetic treatments. I also have a heartfelt interest in pediatric dentistry, where my gentle approach ensures that children feel comfortable and cared for during their dental visits, fostering a positive attitude toward oral health from an early age.
+            We at Dental House offer  the finest dental care to our patients in Mysore. Our aim is to provide high quality dental treatment in a tranquil, relaxed and friendly environment. We specialized in all the latest dental procedures. If you are looking for quality, ethics and value for your time then Dental House is the right place for you. At Dental House we have had the joy of crafting beautiful smiles for hundreds of patients. Our commitment to excellence and personalized care ensures that each individual leaves our clinic with enhanced, confidence and satisfaction.
             </p>
           </div>
           <div className="px-4 py-2">
             <p className="text-xl font-medium mb-2">QUALIFICATION</p>
             <p>
-            I have completed dental surgeon with a Bachelor of Dental Surgery (BDS) degree and a prestigious fellowship in aesthetic and cosmetic dentistry.
-            I am specialized in all the basic & latest dental procedures including dental implants, teeth whitening, porcelain veneers, smile corrections, gap closures, fixed teeth, root canal treatment, gum surgery, braces, kids dentistry, laser dentistry, gummy smile correction metal free 
+            Dr. Varsha is a dedicated and compassionate dental surgeon with a Bachelor Of Dental Surgery (BDS) degree and a prestigious fellowship in aesthetic and cosmetic dentistry. Dr. Varsha also has a heartfelt interest in pediatric dentistry. She brings a wealth of expertise to her practice, specialising in enhancing smiles with advanced treatments.
             </p>
           </div>
         </div>
