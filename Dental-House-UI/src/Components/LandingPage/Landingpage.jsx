@@ -3,7 +3,7 @@ import doctorimg from "../images/Doctor.jpeg";
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-gradient-to-b from-indigo-400 from-5% to-slate-50 to-70% flex justify-center items-center font-serif">
-      <div className="h-screen min-h-screen flex justify-center items-center w-11/12">
+      <div className="h-screen min-h-screen flex justify-center items-center w-11/12 mt-14">
         <div className="w-3/5">
           <div className="px-4 py-2">
             <h1 className="text-5xl font-medium mb-4">Dr. Varsha Gupta</h1>
