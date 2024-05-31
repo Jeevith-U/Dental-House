@@ -9,10 +9,10 @@ const App = () => {
   return (
     <>
      <Header2/>
-     <Tips/>
-     {/* <Landingpage/>
+    <Landingpage/>
      <Treatement/>
-     <QnA/>  */}
+     <QnA/>
+     <Tips/>
     
     </>
      
