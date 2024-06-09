@@ -29,7 +29,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    SecurityFilterChain loginSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    SecurityFilterChain loginFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .securityMatchers(matcher -> matcher.requestMatchers(baseUrl+"/login/**"))
                 .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
