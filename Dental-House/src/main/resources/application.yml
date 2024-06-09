@@ -21,3 +21,8 @@ server:
 # Additional Configurations
 app:
   base_url: /api/v1
+  jwt:
+    secret: ${jwt.secret}
+    token_expiry:
+        access_seconds: 3600
+        refresh_seconds: 1296000

@@ -19,12 +19,12 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    @Value("${myapp.jwt.secret}")
+    @Value("${app.jwt.secret}")
     private String secret;
 
-    @Value("${token.expiry.access.seconds}")
+    @Value("${app.jwt.token_expiry.access_seconds}")
     private long accessTokenExpirySeconds;
-    @Value("${token.expiry.refresh.seconds}")
+    @Value("${app.jwt.token_expiry.refresh_seconds}")
     private long refreshTokenExpirySeconds;
 
     public static final String CLAIM_ROLES = "roles";
