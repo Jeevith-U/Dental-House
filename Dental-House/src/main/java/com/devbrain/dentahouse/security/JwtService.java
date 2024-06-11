@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.function.Function;
 
 
@@ -27,21 +28,19 @@ public class JwtService {
     @Value("${app.jwt.token_expiry.refresh_seconds}")
     private long refreshTokenExpirySeconds;
 
-    public static final String CLAIM_ROLES = "roles";
-
-    public String generateAccessToken(String username, String roles) {
+    public String generateAccessToken(String username) {
         log.info("Generating Access Token...");
-        return createJwtToken(roles, username, accessTokenExpirySeconds * 1000L);
+        return createJwtToken(username, accessTokenExpirySeconds * 1000L);
     }
 
-    public String generateRefreshToken(String username, String roles) {
+    public String generateRefreshToken(String username) {
         log.info("Generating Refresh Token...");
-        return createJwtToken(roles, username, refreshTokenExpirySeconds * 1000L);
+        return createJwtToken(username, refreshTokenExpirySeconds * 1000L);
     }
 
-    private String createJwtToken(String roles, String username, long expiryDuration) {
+    private String createJwtToken(String username, long expiryDuration) {
         return Jwts.builder()
-                .setClaims(Maps.of(CLAIM_ROLES, roles).build())
+                .setClaims(new HashMap<>())
                 .setSubject(username)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date((System.currentTimeMillis() + expiryDuration)))
@@ -57,10 +56,6 @@ public class JwtService {
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
-    }
-
-    public String extractUserRoles(String token) {
-        return parseClaims(token).get(CLAIM_ROLES, String.class);
     }
 
     public Date extractExpiry(String token){
