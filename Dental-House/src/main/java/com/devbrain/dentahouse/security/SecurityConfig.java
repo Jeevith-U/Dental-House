@@ -32,7 +32,7 @@ public class SecurityConfig {
     SecurityFilterChain loginFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .securityMatchers(matcher -> matcher.requestMatchers(baseUrl+"/login/**"))
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                .authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(new LoginFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();

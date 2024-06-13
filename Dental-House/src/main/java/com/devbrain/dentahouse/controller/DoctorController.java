@@ -5,10 +5,7 @@ import com.devbrain.dentahouse.responsedto.AuthResponse;
 import com.devbrain.dentahouse.service.DoctorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("${app.base_url}")
@@ -20,5 +17,11 @@ public class DoctorController {
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest authRequest){
         return doctorService.login(authRequest);
+    }
+
+    @PostMapping("/refresh-login")
+    public ResponseEntity<AuthResponse> refreshLogin(@CookieValue(required = false, name = "rt") String refreshToken,
+                                                     @CookieValue(required = false, name = "at") String accessToken){
+        return doctorService.refreshLogin(refreshToken, accessToken);
     }
 }
