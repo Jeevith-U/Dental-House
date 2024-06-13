@@ -6,6 +6,7 @@ import QnA from '../LandingPage/QnA'
 import Tips from '../LandingPage/Tips'
 import Footer from '../HeaderAndFooter/Footer'
 import Forms from '../Forms/Forms'
+import { Reviews } from '../LandingPage/Reviews'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
      <Landingpage/>
      <Treatement/>
      <QnA/>
-     <Forms/>
+     {/* <Forms/> */}
+     <Reviews/>
     <Footer/>
     </>
      
