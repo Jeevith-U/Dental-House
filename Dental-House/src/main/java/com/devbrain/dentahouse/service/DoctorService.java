@@ -4,6 +4,7 @@ import com.devbrain.dentahouse.entity.Doctor;
 import com.devbrain.dentahouse.exceptions.UserNotLoggedInException;
 import com.devbrain.dentahouse.repository.DoctorRepository;
 import com.devbrain.dentahouse.requestdto.AuthRequest;
+import com.devbrain.dentahouse.requestdto.PasswordRequest;
 import com.devbrain.dentahouse.responsedto.AuthResponse;
 import com.devbrain.dentahouse.security.JwtService;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -18,6 +19,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -137,5 +139,19 @@ public class DoctorService {
                 .accessExpiration(evaluatedAccessExpiration)
                 .refreshExpiration(evaluatedRefreshExpiration)
                 .build());
+    }
+
+    private static final String FAILED_PWD_UPDATE = "Failed to update password";
+
+    public ResponseEntity<String> updatePassword(PasswordRequest passwordRequest) {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, passwordRequest.getOldPassword()));
+        if(auth.isAuthenticated()){
+            return doctorRepository.findByEmail(email).map(doctor -> {
+                doctor.setPassword(passwordRequest.getNewPassword());
+                doctorRepository.save(doctor);
+                return ResponseEntity.ok("Password updated successfully");
+            }).orElseThrow(() -> new UsernameNotFoundException(FAILED_PWD_UPDATE));
+        } else throw new BadCredentialsException(FAILED_PWD_UPDATE);
     }
 }

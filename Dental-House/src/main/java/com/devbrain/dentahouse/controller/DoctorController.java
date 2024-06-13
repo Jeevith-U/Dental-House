@@ -1,6 +1,7 @@
 package com.devbrain.dentahouse.controller;
 
 import com.devbrain.dentahouse.requestdto.AuthRequest;
+import com.devbrain.dentahouse.requestdto.PasswordRequest;
 import com.devbrain.dentahouse.responsedto.AuthResponse;
 import com.devbrain.dentahouse.service.DoctorService;
 import lombok.AllArgsConstructor;
@@ -23,5 +24,10 @@ public class DoctorController {
     public ResponseEntity<AuthResponse> refreshLogin(@CookieValue(required = false, name = "rt") String refreshToken,
                                                      @CookieValue(required = false, name = "at") String accessToken){
         return doctorService.refreshLogin(refreshToken, accessToken);
+    }
+
+    @PutMapping("/password")
+    public ResponseEntity<String> updatePassword(@RequestBody PasswordRequest passwordRequest){
+        return doctorService.updatePassword(passwordRequest);
     }
 }
