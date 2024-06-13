@@ -21,6 +21,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -30,6 +31,7 @@ public class DoctorService {
 
     private final AuthenticationManager authenticationManager;
     private final DoctorRepository doctorRepository;
+    private final PasswordEncoder passwordEncoder;
 
     private final JwtService jwtService;
 
@@ -39,10 +41,14 @@ public class DoctorService {
     @Value("${app.jwt.token_expiry.refresh_seconds}")
     private long refreshExpirySeconds;
 
-    public DoctorService(AuthenticationManager authenticationManager, DoctorRepository doctorRepository, JwtService jwtService) {
+    public DoctorService(AuthenticationManager authenticationManager,
+                         DoctorRepository doctorRepository,
+                         JwtService jwtService,
+                         PasswordEncoder passwordEncoder) {
         this.authenticationManager = authenticationManager;
         this.doctorRepository = doctorRepository;
         this.jwtService = jwtService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public ResponseEntity<AuthResponse> login(AuthRequest authRequest) {
@@ -148,7 +154,7 @@ public class DoctorService {
         Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, passwordRequest.getOldPassword()));
         if(auth.isAuthenticated()){
             return doctorRepository.findByEmail(email).map(doctor -> {
-                doctor.setPassword(passwordRequest.getNewPassword());
+                doctor.setPassword(passwordEncoder.encode(passwordRequest.getNewPassword()));
                 doctorRepository.save(doctor);
                 return ResponseEntity.ok("Password updated successfully");
             }).orElseThrow(() -> new UsernameNotFoundException(FAILED_PWD_UPDATE));
