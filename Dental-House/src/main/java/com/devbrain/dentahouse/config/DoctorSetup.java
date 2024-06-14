@@ -4,7 +4,6 @@ import com.devbrain.dentahouse.entity.Doctor;
 import com.devbrain.dentahouse.repository.DoctorRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.security.crypto.password.PasswordEncoder;
