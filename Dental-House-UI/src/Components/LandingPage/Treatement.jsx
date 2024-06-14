@@ -1,11 +1,11 @@
 import React from 'react'
-import tretbg from '../images/treatement.jpg'
-import braces from '../images/braces.png'
-import cleaning from '../images/cleaning.png'
-import rootcanal from '../images/rootcanal.png'
-import implant from '../images/implant.png'
-import dentures from'../images/dentures.png'
-import filling from '../images/filling.png'
+import tretbg from '../Images/treatement.jpg'
+import braces from '../Images/braces.png'
+import cleaning from '../Images/cleaning.png'
+import rootcanal from '../Images/rootcanal.png'
+import implant from '../Images/implant.png'
+import dentures from'../Images/dentures.png'
+import filling from '../Images/filling.png'
 
 const Treatement = () => {
   return (
