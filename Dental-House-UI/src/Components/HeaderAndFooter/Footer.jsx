@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='min-h-96 bg-gray-600 flex justify-between items-start p-4'>
     <div className='flex flex-col space-y-4'>
       <div className='ml-40'>
-          <div className='border border-white border-8 p-0'>
+          <div className=' border-white border-8 p-0'>
             <img src={footerimg} alt="Image 1" className="h-auto w-96 object-cover"/>
           </div>
          
@@ -31,8 +31,6 @@ const Footer = () => {
 
        <div className="flex space-x-4 ">
 
-        {/*<a href="#" className="text-white">Facebook</a>
-        <a href="#" className="text-white">Twitter</a>*/}
         <a href="https://www.instagram.com/drvarshadentalhouse?igsh=MXFsNzd6cGI5NGYzOQ%3D%3D" className="text-white"><img src={insta} className='w-8 m-3' /> </a>
       </div> 
 
