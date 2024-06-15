@@ -23,4 +23,9 @@ public class PatientController {
     public ResponseEntity<PatientResponse> getPatientById(@PathVariable String patientId){
         return patientService.getPatient(patientId);
     }
+
+    @PutMapping("/patients/{patientId}")
+    public ResponseEntity<PatientResponse> updatePatient(@RequestBody PatientRequest patientRequest, @PathVariable String patientId){
+        return patientService.updatePatient(patientRequest, patientId);
+    }
 }

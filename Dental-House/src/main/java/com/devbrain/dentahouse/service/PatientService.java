@@ -32,4 +32,12 @@ public class PatientService {
                 .body(patientMapper.mapToPatientResponse(patient)))
                 .orElseThrow(() -> new PatientNotFoundByIdException("Failed to find the patient"));
     }
+
+    public ResponseEntity<PatientResponse> updatePatient(PatientRequest patientRequest, String patientId) {
+        return patientRepository.findById(patientId).map(patient -> {
+            patientMapper.mapToPatient(patientRequest, patient);
+            patient = patientRepository.save(patient);
+            return ResponseEntity.ok(patientMapper.mapToPatientResponse(patient));
+        }).orElseThrow(() -> new PatientNotFoundByIdException("Failed to update the patient"));
+    }
 }
