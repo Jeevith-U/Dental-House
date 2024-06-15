@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+
 @Service
 @AllArgsConstructor
 public class PatientService {
@@ -20,6 +22,7 @@ public class PatientService {
 
     public ResponseEntity<PatientResponse> addPatient(PatientRequest patientRequest) {
         Patient patient = patientMapper.mapToPatient(patientRequest, new Patient());
+        patient.setRegisteredDate(LocalDate.now());
         patient = patientRepository.save(patient);
 
         return ResponseEntity.status(HttpStatus.CREATED)
