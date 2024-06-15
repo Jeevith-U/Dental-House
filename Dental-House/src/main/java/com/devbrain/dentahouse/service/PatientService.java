@@ -1,6 +1,7 @@
 package com.devbrain.dentahouse.service;
 
 import com.devbrain.dentahouse.entity.Patient;
+import com.devbrain.dentahouse.exceptions.PatientNotFoundByIdException;
 import com.devbrain.dentahouse.mapper.PatientMapper;
 import com.devbrain.dentahouse.repository.PatientRepository;
 import com.devbrain.dentahouse.requestdto.PatientRequest;
@@ -23,5 +24,12 @@ public class PatientService {
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(patientMapper.mapToPatientResponse(patient));
+    }
+
+    public ResponseEntity<PatientResponse> getPatient(String patientId) {
+        return patientRepository.findById(patientId).map(patient -> ResponseEntity
+                .status(HttpStatus.FOUND)
+                .body(patientMapper.mapToPatientResponse(patient)))
+                .orElseThrow(() -> new PatientNotFoundByIdException("Failed to find the patient"));
     }
 }
