@@ -23,7 +23,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     private JwtService jwtService;
 
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.info("Authenticating Access Credentials..");

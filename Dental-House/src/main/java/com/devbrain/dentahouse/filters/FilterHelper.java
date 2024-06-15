@@ -12,6 +12,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 public class FilterHelper {
 
@@ -22,10 +23,10 @@ public class FilterHelper {
     }
 
     public static String extractCookie(String cookieName, Cookie[] cookies){
-        return Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName))
+       List<String> cookieValues = Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName))
                 .map(Cookie::getValue)
-                .toList()
-                .get(0);
+                .toList();
+        return cookieValues.isEmpty() ? null : cookieValues.get(0);
     }
 
     public static void setAuthentication(String username, HttpServletRequest request){
