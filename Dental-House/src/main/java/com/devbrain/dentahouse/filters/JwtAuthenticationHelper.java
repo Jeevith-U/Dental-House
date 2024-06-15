@@ -14,9 +14,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-public class FilterHelper {
+public class JwtAuthenticationHelper {
 
-    private FilterHelper() {
+    private JwtAuthenticationHelper() {
         /*
          * Created private constructor to avoid Instantiation of class
          * */
