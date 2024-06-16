@@ -9,18 +9,7 @@ const Landingpage = () => {
             <h1 className="text-6xl font-medium mb-4 w-full font-caveat">
               Dr. Varsha Gupta
             </h1>
-            {/* <p className="text-xl font-semibold mb-2 font-caveat">About Us</p>
-            <p className="mb-6 font-comfortaa text-sm">
-              We at Dental House offer the finest dental care to our patients in
-              Mysore. Our aim is to provide high quality dental treatment in a
-              tranquil, relaxed and friendly environment. We specialized in all
-              the latest dental procedures. If you are looking for quality,
-              ethics and value for your time then Dental House is the right
-              place for you. At Dental House we have had the joy of crafting
-              beautiful smiles for hundreds of patients. Our commitment to
-              excellence and personalized care ensures that each individual
-              leaves our clinic with enhanced, confidence and satisfaction.
-            </p> */}
+            
           </div>
           <div className="w-full py-2 mb-10">
             <p className="text-2xl font-medium mb-2 font-caveat">

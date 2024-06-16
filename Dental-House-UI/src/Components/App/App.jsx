@@ -4,12 +4,14 @@ import Landingpage from "../LandingPage/Landingpage";
 import Treatement from "../LandingPage/Treatement";
 import QnA from "../LandingPage/QnA";
 import Tips from "../LandingPage/Tips";
+import About from "../LandingPage/About";
 
 const App = () => {
   return (
     <>
       <Header2 />
       <Landingpage />
+      <About/>
       <Treatement />
       <QnA />
       <Tips />
