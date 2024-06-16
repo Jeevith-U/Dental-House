@@ -9,13 +9,13 @@ import filling from "../images/filling.png";
 
 const Treatement = () => {
   return (
-        <div className="h-screen w-full min-h-screen flex flex-col justify-center items-center" style={{backgroundImage : `url(${tretbg})`}}>
-          <div className="mt-14 w-11/12 flex flex-col justify-center items-center text-white" >
+        <div className="mt-20 h-screen w-full min-h-screen flex flex-col justify-center items-center">
+          <div className="w-11/12 flex flex-col justify-center items-center text-slate-700" >
             {/*style={{backgroundImage : `url(${tretbg})`}}*/}
-            <h1 className="font-extrabold text-4xl text-left w-full font-serif">
+            <h1 className="text-5xl font-medium text-left w-full mb-10">
               Treatement
             </h1>
-            <div className="grid grid-cols-3 gap-20 h-fit">
+            <div className="grid grid-cols-3 gap-20">
               <Card
                 src={braces}
                 text="Dental bonding is a technique used to correct imperfections with
