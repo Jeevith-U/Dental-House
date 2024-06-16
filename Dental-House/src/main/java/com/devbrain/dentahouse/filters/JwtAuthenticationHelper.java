@@ -2,6 +2,8 @@ package com.devbrain.dentahouse.filters;
 
 import com.devbrain.dentahouse.util.SimpleResponseStructure;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,20 +14,21 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
-public class FilterHelper {
+public class JwtAuthenticationHelper {
 
-    private FilterHelper() {
+    private JwtAuthenticationHelper() {
         /*
          * Created private constructor to avoid Instantiation of class
          * */
     }
 
     public static String extractCookie(String cookieName, Cookie[] cookies){
-        return Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName))
+       List<String> cookieValues = Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName))
                 .map(Cookie::getValue)
-                .toList()
-                .get(0);
+                .toList();
+        return cookieValues.isEmpty() ? null : cookieValues.get(0);
     }
 
     public static void setAuthentication(String username, HttpServletRequest request){

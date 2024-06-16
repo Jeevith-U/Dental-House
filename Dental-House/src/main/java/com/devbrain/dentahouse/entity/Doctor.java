@@ -1,12 +1,8 @@
 package com.devbrain.dentahouse.entity;
 
-import com.devbrain.dentahouse.config.EntityIdGenerator;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.devbrain.dentahouse.config.GenerateCustomId;
+import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "doctor")
@@ -17,8 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 @NoArgsConstructor
 public class Doctor {
     @Id
-    @GeneratedValue(generator = "entity-id-generator")
-    @GenericGenerator(name = "entity-id-generator", type = EntityIdGenerator.class)
+    @GenerateCustomId
     private String doctorId;
     private String name;
     private long phoneNumber;

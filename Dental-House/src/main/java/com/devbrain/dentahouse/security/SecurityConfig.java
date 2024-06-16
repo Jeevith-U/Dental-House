@@ -1,6 +1,7 @@
 package com.devbrain.dentahouse.security;
 
 import com.devbrain.dentahouse.filters.JwtAuthFilter;
+import com.devbrain.dentahouse.filters.JwtRefreshFilter;
 import com.devbrain.dentahouse.filters.LoginFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -48,6 +49,17 @@ public class SecurityConfig {
 
     @Bean
     @Order(2)
+    SecurityFilterChain refreshFilterChain(HttpSecurity httpSecurity) throws Exception {
+        return httpSecurity.csrf(AbstractHttpConfigurer::disable)
+                .securityMatchers(matcher -> matcher.requestMatchers(baseUrl+"/refresh-login/**"))
+                .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(new JwtRefreshFilter(jwtService), UsernamePasswordAuthenticationFilter.class)
+                .build();
+    }
+
+    @Bean
+    @Order(3)
     SecurityFilterChain authenticationFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .securityMatchers(matcher -> matcher.requestMatchers(baseUrl+"/**"))
