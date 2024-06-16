@@ -63,7 +63,7 @@ export const Card = ({ src, text }) => {
       <div className="w-2/4">
         <img src={src} className="w-full" />
       </div>
-      <div className="font-serif">
+      <div>
         <p>{text}</p>
       </div>
     </div>
