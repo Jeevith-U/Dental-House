@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="w-full bg-white flex justify-center items-center py-10">
-      <div className="mt-8 flex w-11/12 flex-row-reverse justify-center items-center">
+      <div className="flex w-11/12 flex-row-reverse justify-center items-center">
         <div>
           <div className="px-8 mb-8 w-full flex flex-col font-comfortaa text-center text-md justify-center items-center">
             <p>
