@@ -11,7 +11,8 @@ export default {
         'custom-gradient': 'linear-gradient(0deg, #D1A1F7 0%, #F5F5F5 23%, #D8D8D8 59%, #30526D 100%)'
       },
       colors:{
-        "blue_gray" : "30526D"
+        "blue_gray" : "30526D",
+        "bg-blue": "#D1E5F0"
       }
     },
   },
