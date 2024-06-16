@@ -5,12 +5,15 @@ import com.devbrain.dentahouse.enums.BloodGroup;
 import com.devbrain.dentahouse.enums.Gender;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
 @Table(name = "patient")
+@EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
 @Builder
@@ -34,14 +37,13 @@ public class Patient {
     private Long contactNumber;
 
     // Other Info
-    @ElementCollection
-    @CollectionTable(name = "pre_medical_condition", joinColumns = @JoinColumn(name = "patient_id"))
-    @Column(name = "medial_condition")
+    @Column(length = 2000)
     private List<String> preMedicalConditions;
-
     @Column(length = 2000)
     private String note;
 
+    // Auditing Info
+    @CreatedDate
     private LocalDate registeredDate;
     private LocalDate lastSittingDate;
 }
