@@ -13,7 +13,7 @@ const Landingpage = () => {
           </div>
           <div className="w-full py-2 mb-10">
             <p className="text-2xl font-medium mb-2 font-caveat">
-              Qualification <span className="text-sky-500">|</span> Bachelor Of
+              Dental surgeon <span className="text-sky-500">|</span> Bachelor Of
               Dental Surgery (BDS)
             </p>
             <p className="text-sm font-comfortaa">
@@ -33,7 +33,6 @@ const Landingpage = () => {
           <div className="flex h-1/6 justify-end items-end mb-2 mr-24">
             <div className="p-2 mb-4 mr-2 bg-slate-700 rounded-tl-full rounded-bl-full rounded-tr-full h-max opacity-85"></div>
             <div className="p-6 bg-slate-100 rounded-tl-full rounded-br-full rounded-tr-full h-max"></div>
-            {/* <div className="p-2 mb-1 bg-slate-700 rounded-tl-full rounded-bl-full rounded-tr-full mr-20 h-max opacity-75"></div> */}
           </div>
           <div className="w-10/12 h-full">
             <div className="shadow-md rounded-tl-full rounded-bl-full rounded-tr-full bg-slate-100 ">

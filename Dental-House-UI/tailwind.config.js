@@ -12,7 +12,8 @@ export default {
       },
       colors:{
         "blue_gray": "30526D",
-        "bg-blue": "#D1E5F0"
+        "bg-blue": "#D1E5F0",
+        "bg-orange": "#FF822E"
       },
       fontFamily:{
         "great-vibes": ["Great Vibes", "cursive"],
