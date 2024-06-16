@@ -21,7 +21,7 @@ const Header2 = () => {
               <li>QnA</li>
               <li>Reviews</li>
               <li>
-                <button className="bg-slate-100 hover:bg-sky-500 hover:text-slate-50 text-slate-700 font-bold py-2 px-4 rounded-lg transition-colors duration-150 ease-in-out">
+                <button className="bg-slate-50 hover:bg-sky-500 hover:text-slate-50 text-slate-700 font-bold py-2 px-4 rounded-lg transition-colors duration-150 ease-in-out hidden">
                   Request Appointment
                 </button>
               </li>
