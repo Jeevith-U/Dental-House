@@ -12,7 +12,7 @@ import review9 from '../Images/Review Images/review9.png';
 export const Reviews = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-gray-500 flex justify-center items-center font-serif">
-      <div className="h-screen min-h-screen flex justify-center items-center w-11/12 mt-14">
+      <div className="h-screen min-h-screen flex justify-center items-center w-4/5 mt-5">
         <div className="grid grid-cols-3 gap-4 p-10 w-full">
           <div className="p-4">
             <img src={review1} alt="Review 1" className="w-full h-auto max-h-60 object-contain" />

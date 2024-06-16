@@ -15,7 +15,7 @@ const App = () => {
      <Landingpage/>
      <Treatement/>
      <QnA/>
-     <Forms/>
+     {/* <Forms/> */}
      <Reviews/>
     <Footer/>
     </>
