@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import bgimage from '../images/forms-bg.png';
-import image from '../images/forms.png';
+import bgimage from '../Images/forms-bg.png';
+import image from '../Images/forms.png';
 import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
@@ -118,7 +118,7 @@ const Forms = () => {
                 <div className="flex items-center justify-end">
                   <button
                     type="submit"
-                    className="mt-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="mt-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" 
                   >
                     Submit
                   </button>

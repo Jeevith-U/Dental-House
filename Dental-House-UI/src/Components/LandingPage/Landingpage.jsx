@@ -1,5 +1,5 @@
 import React from "react";
-import doctorimg from "../images/Doctor.jpeg";
+import doctorimg from "../Images/Doctor.jpeg";
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-gradient-to-b from-indigo-400 from-5% to-slate-50 to-70% flex justify-center items-center font-serif">
