@@ -118,15 +118,15 @@ export default Treatement;
 
 export const Card = ({ icon, text, name, tribute }) => {
   return (
-    <div className="transfor transition-all duration-150 hover:scale-110 hover:bg-sky-500 hover:text-white p-4 rounded-md flex flex-col justify-center items-center font-comfortaa text-sm text-center">
+    <div className="transfor transition-all duration-150 hover:scale-110 hover:bg-sky-500 hover:text-white p-4 pt-0 pr-1 rounded-md flex flex-col justify-center items-center font-comfortaa text-sm text-center">
+      <p className="text-sm text-center w-full mb-auto">{tribute}</p>
       <div className="flex flex-col justify-center items-center">
-        <div className="flex w-full flex-col justify-center items-center">
+        <div className="flex w-full flex-col justify-center items-center pr-4">
           <div className="text-3xl">{icon}</div>
           <p className="text-lg font-extrabold">{name}</p>
         </div>
-        <p className="flex flex-col jc items-center">
+        <p className="flex flex-col jc items-center pr-3">
           <span>{text}</span>
-          <span className="text-sm">{tribute}</span>
         </p>
       </div>
     </div>
@@ -134,25 +134,18 @@ export const Card = ({ icon, text, name, tribute }) => {
 };
 
 export const Tribute = ({ link, text }) => {
-  const [tributeHovered, setTribureHovered] = useState(false);
 
   return (
-    <div className={`h-5`}>
+    <div className={`h-5 mb-3 w-full flex justify-end`}>
       <div
-        className={`h-3.5 flex justify-center items-center text-bg-blue border border-bg-blue opacity-80 mt-1 text-xxs ${
-          tributeHovered
-            ? "w-full opacity-80 text-white border-sky-500"
-            : "w-3.5 border rounded-full border-white"
-        }`}
+        className={`flex justify-center items-center text-bg-blue opacity-80 text-xxs p-1`}
       >
         <a
           href={link}
-          onMouseEnter={() => setTribureHovered(true)}
-          onMouseLeave={() => setTribureHovered(false)}
           target="_blank"
-          className={`underline font-mono p-1 min-h-5`}
+          className={`font-mono underline`}
         >
-          {tributeHovered ? text : "i"}
+          {text}
         </a>
       </div>
     </div>
