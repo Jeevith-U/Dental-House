@@ -11,6 +11,7 @@ import filling from "../images/cavity.png";
 import rootcanal from "../images/rootcanal.png";
 import denture from "../images/denture.png";
 import braces from "../images/braces.png";
+import { GoInfo } from "react-icons/go";
 
 const Treatement = () => {
   return (
@@ -134,20 +135,48 @@ export const Card = ({ icon, text, name, tribute }) => {
 };
 
 export const Tribute = ({ link, text }) => {
-
+  const [tributeHovered, setTributeHovered] = useState(false);
   return (
-    <div className={`h-5 mb-3 w-full flex justify-end`}>
+    <div className={`h-5 w-full flex justify-end`}>
       <div
-        className={`flex justify-center items-center text-bg-blue opacity-80 text-xxs p-1`}
+        className={`flex justify-end items-center text-bg-blue opacity-80  p-1 ${
+          tributeHovered
+            ? "w-full opacity-80 text-white border-sky-500 text-xxs"
+            : " rounded-full border-bg-blue text-xs"
+        }`
+      }
+      onMouseEnter={() => setTributeHovered(true)}
+      onMouseLeave={() => setTributeHovered(false)}
       >
         <a
           href={link}
           target="_blank"
           className={`font-mono underline`}
         >
-          {text}
+          {tributeHovered ? text : <GoInfo />}
         </a>
       </div>
     </div>
   );
 };
+
+
+{/* <div className={`h-5`}>
+ <div
+className={`h-3.5 flex justify-center items-center text-bg-blue border border-bg-blue opacity-80 mt-1 text-xxs ${
+  tributeHovered
+    ? "w-full opacity-80 text-white border-sky-500"
+    : "w-3.5 border rounded-full border-bg-blue"
+}`}
+>
+<a
+  href={link}
+  onMouseEnter={() => setTribureHovered(true)}
+  onMouseLeave={() => setTribureHovered(false)}
+  target="_blank"
+  className={`underline font-mono p-1 min-h-5`}
+>
+  {tributeHovered ? text : "i"}
+</a>
+</div>
+</div> */}
