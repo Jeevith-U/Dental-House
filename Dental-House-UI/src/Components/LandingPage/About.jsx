@@ -20,29 +20,39 @@ const About = () => {
               />
               <Card
                 text={"Tranquil Environment"}
-                desc={" Our clinic provides a calm and friendly atmosphere to make your visits pleasant and stress-free"}
+                desc={
+                  " Our clinic provides a calm and friendly atmosphere to make your visits pleasant and stress-free"
+                }
                 image={"bg-tranquil-env"}
               />
               <Card
                 text={"Latest Procedures"}
-                desc={"We specialize in cutting-edge dental treatments, staying at the forefront of dental technology and innovation."}
+                desc={
+                  "We specialize in cutting-edge dental treatments, staying at the forefront of dental technology and innovation."
+                }
                 image={"bg-latest-procedures"}
               />
             </ul>
             <ul className="flex w-full h-full flex-col justify-evenly items-stretch">
               <Card
                 text={"Quality and Ethics"}
-                desc={"We uphold the highest standards of quality and ethical practices in all our services."}
+                desc={
+                  "We uphold the highest standards of quality and ethical practices in all our services."
+                }
                 image={"bg-quality-and-ethics"}
               />
               <Card
                 text={"Personalized Care"}
-                desc={" Every patient receives customized treatment plans tailored to their unique needs and preferences"}
+                desc={
+                  " Every patient receives customized treatment plans tailored to their unique needs and preferences"
+                }
                 image={"bg-personalized-care"}
               />
               <Card
                 text={"Enhanced Confidence"}
-                desc={"Our goal is to help you achieve a smile that boosts your confidence and enhances your overall well-being."}
+                desc={
+                  "Our goal is to help you achieve a smile that boosts your confidence and enhances your overall well-being."
+                }
                 image={"bg-enhanced-confidence"}
               />
             </ul>
@@ -59,7 +69,7 @@ const About = () => {
               </p>
               <p className="mt-4 mb-4 text-2xl  font-extrabold text-slate-700">
                 {/* <span className="text-slate-700 text-3xl">{"[ "}</span> */}
-                <span className="text-left">
+                <span>
                   If you are seeking
                   <TypeAnimation
                     sequence={[
@@ -103,21 +113,20 @@ export const Card = ({ text, image, desc }) => {
   const [cardHovered, setCardHovered] = useState(false);
   return (
     <li
-      className={`flex justify-start items-end h-32 mx-3 my-2 shadow-md ${image} bg-cover overflow-y-hidden`}
+      className={`flex justify-start items-end h-32 mx-3 my-2 shadow-md overflow-y-hidden ${image} bg-cover`}
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
     >
-      {/* <span className="bg-bg-orange p-1 rounded-full"></span> */}
-      <div
-        className={`text-white w-full px-2 h-full pt-1.5 transition-all ease-in-out duration-300 ${
-          cardHovered
-            ? "-translate-y-0 bg-opacity-80 bg-sky-500"
-            : "translate-y-24 bg-opacity-50 bg-black"
-        }`}
-      >
-        <p className={`${cardHovered ? "text-md" : "text-sm"}`}>{text}</p>
-        <p className="text-sm font-light">{desc}</p>
-      </div>
+        <div
+          className={`text-white w-full px-2 h-full pt-1.5 transition-all ease-in-out duration-300 ${
+            cardHovered
+              ? "-translate-y-0 bg-opacity-80 bg-sky-500"
+              : "translate-y-24 bg-opacity-50 bg-black"
+          }`}
+        >
+          <p>{text}</p>
+          <p className="text-sm font-light">{desc}</p>
+        </div>
     </li>
   );
 };

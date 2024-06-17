@@ -39,7 +39,7 @@ const Landingpage = () => {
               <img
                 src={doctorimg}
                 alt="Doctor-img"
-                className="w-full rounded-tl-full rounded-bl-full rounded-tr-full pb-2  transfor transition-transform duration-700 ease-in-out hover:-translate-x-2"
+                className="w-full rounded-tl-full rounded-bl-full rounded-tr-full pb-2 pl-2 transfor transition-transform duration-700 ease-in-out hover:-translate-x-2"
               />
             </div>
           </div>
