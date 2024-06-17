@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TbDentalBroken } from "react-icons/tb";
 import { TbDental } from "react-icons/tb";
 import { LiaTeethOpenSolid } from "react-icons/lia";
@@ -10,7 +10,7 @@ import cleaning from "../images/tooth-brush.png";
 import filling from "../images/cavity.png";
 import rootcanal from "../images/rootcanal.png";
 import denture from "../images/denture.png";
-import braces from "../images/braces.png"
+import braces from "../images/braces.png";
 
 const Treatement = () => {
   return (
@@ -26,13 +26,10 @@ const Treatement = () => {
               <img src={braces} className="w-12 p-2 rounded-full bg-white" />
             }
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/dentist"
-                title="dentist icons"
-                className="underline text-sm font-mono"
-              >
-                Dentist icons created by Smashicons - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/dentist"}
+                text={"Dentist icons created by Smashicons - Flaticon"}
+              />
             }
             name={"Dental Bonding"}
             text="Dental bonding is a technique used to correct imperfections with
@@ -44,13 +41,10 @@ const Treatement = () => {
             }
             name={"Root Canal"}
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/root-canal"
-                title="root canal icons"
-                className="underline text-sm font-mono"
-              >
-                Root canal icons created by Pop Vectors - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/root-canal"}
+                text={"Root canal icons created by Pop Vectors - Flaticon"}
+              />
             }
             text=" A root canal is a dental procedure that is used to repair teeth
                     that are infected or badly decayed. Some people fear root canal
@@ -62,13 +56,10 @@ const Treatement = () => {
             }
             name={"Dental Crown"}
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/tooth"
-                title="tooth icons"
-                className="underline text-sm font-mono"
-              >
-                Tooth icons created by fatihicon - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/tooth"}
+                text={"Tooth icons created by fatihicon - Flaticon"}
+              />
             }
             text="A dental crown is a dental prosthesis which replaces the visible
                     part of a tooth. A dental crown functions to strengthen teeth,
@@ -80,13 +71,10 @@ const Treatement = () => {
             }
             name={"Dentures"}
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/denture"
-                title="denture icons"
-                className="underline text-sm font-mono"
-              >
-                Denture icons created by Freepik - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/denture"}
+                text={"Denture icons created by Freepik - Flaticon"}
+              />
             }
             text="Have you lost most or all of your teeth? Dentures are removable
                     appliances that can replace missing teeth."
@@ -97,13 +85,10 @@ const Treatement = () => {
             }
             name={"Cosmetic Filling"}
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/tooth"
-                title="tooth icons"
-                className="underline text-sm font-mono"
-              >
-                Tooth icons created by Soodesign - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/tooth"}
+                text={"Tooth icons created by Soodesign - Flaticon"}
+              />
             }
             text=" Cosmetic fillings, or tooth- colored fillings, are made of
                     composite resin and glass particles. They are cemented onto the
@@ -114,13 +99,10 @@ const Treatement = () => {
               <img src={cleaning} className="w-12 p-2 rounded-full bg-white" />
             }
             tribute={
-              <a
-                href="https://www.flaticon.com/free-icons/tooth-brush"
-                title="Tooth Brush icons"
-                className="underline text-sm font-mono"
-              >
-                Tooth Brush icons created by Freepik - Flaticon
-              </a>
+              <Tribute
+                link={"https://www.flaticon.com/free-icons/tooth-brush"}
+                text={"Tooth Brush icons created by Freepik - Flaticon"}
+              />
             }
             name={"Teeth Cleaning"}
             text=" You should visit the dentist every six months - one year for teeth
@@ -142,8 +124,36 @@ export const Card = ({ icon, text, name, tribute }) => {
           <div className="text-3xl">{icon}</div>
           <p className="text-lg font-extrabold">{name}</p>
         </div>
-        <p>{text}</p>
-        <span className="text-sm">{tribute}</span>
+        <p className="flex flex-col jc items-center">
+          <span>{text}</span>
+          <span className="text-sm">{tribute}</span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export const Tribute = ({ link, text }) => {
+  const [tributeHovered, setTribureHovered] = useState(false);
+
+  return (
+    <div className={`h-5`}>
+      <div
+        className={`h-3.5 flex justify-center items-center text-bg-blue border border-bg-blue opacity-80 mt-1 text-xxs ${
+          tributeHovered
+            ? "w-full opacity-80 text-white border-sky-500"
+            : "w-3.5 border rounded-full border-white"
+        }`}
+      >
+        <a
+          href={link}
+          onMouseEnter={() => setTribureHovered(true)}
+          onMouseLeave={() => setTribureHovered(false)}
+          target="_blank"
+          className={`underline font-mono p-1 min-h-5`}
+        >
+          {tributeHovered ? text : "i"}
+        </a>
       </div>
     </div>
   );

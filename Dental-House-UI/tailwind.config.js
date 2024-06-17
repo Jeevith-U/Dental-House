@@ -22,6 +22,12 @@ export default {
         "open-sans": ["Open Sans", "sans-serif"],
         "poppins": ["Poppins", "sans-serif"],
         "comfortaa": ["Comfortaa", "sans-serif"]
+      },
+      fontSize: {
+        "xxs": "8px"
+      },
+      borderColor: {
+        "1": "2px"
       }
     },
   },
