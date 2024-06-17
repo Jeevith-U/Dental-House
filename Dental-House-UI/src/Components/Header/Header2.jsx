@@ -9,9 +9,10 @@ const Header2 = () => {
             <div className="border-r-2 border-slate-50 pr-2">
             <img src={logo} alt="logo" className="h-12 w-12 rounded-full" />
             </div>
-            <div className="flex flex-col text-xl font-extrabold font-comfortaa">
-              <span className="px-2">Dental</span>
-              <span className="px-2">House</span>
+            <div className="flex flex-col text-3xl px-2 font-extrabold font-comfortaa">
+              <p>Dental House</p>
+              {/* <span className="px-2">Dental</span>
+              <span className="px-2">House</span> */}
             </div>
           </div>
           <nav className="font-comfortaa">
