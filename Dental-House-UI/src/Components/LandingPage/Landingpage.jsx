@@ -26,14 +26,14 @@ const Landingpage = () => {
               smiles with advanced treatments.
             </p>
           </div>
-          <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 py-2 px-4 rounded-lg font-comfortaa font-extrabold transition-colors duration-150 ease-in-out">
+          <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 py-2 px-4 rounded-lg font-comfortaa font-extrabold transition-colors duration-300 ease-in-out">
             Request Appointment
           </button>
         </div>
         <div className="w-2/5 h-full flex flex-col items-center justify-end">
           <div className="flex h-1/6 justify-end items-end mb-2 mr-24">
             <div className="p-2 mb-4 mr-2 bg-slate-700 rounded-tl-full rounded-bl-full rounded-tr-full h-max opacity-85"></div>
-            <div className="p-6 bg-slate-100 opacity-80 rounded-tl-full rounded-br-full rounded-tr-full h-max"></div>
+            <div className="p-6 bg-white opacity-80 rounded-tl-full rounded-br-full rounded-tr-full h-max"></div>
           </div>
           <div className="w-10/12 h-full">
             <div className="shadow-md rounded-tl-full rounded-bl-full rounded-tr-full bg-slate-100 ">
