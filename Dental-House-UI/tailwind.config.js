@@ -8,7 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         // 'custom-gradient': 'linear-gradient(0deg, #D1A1F7 0%, #F5F5F5 23%, #D8D8D8 59%, #30526D 100%)',
-        'custom-gradient': 'linear-gradient(0deg, #D1A1F7 0%, #F5F5F5 23%, #D8D8D8 59%, #30526D 100%)',
+        'intro': 'url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=3868&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'finest-dental-care': "url(https://plus.unsplash.com/premium_photo-1664301978110-36462c87b15a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         'tranquil-env': "url(https://images.unsplash.com/photo-1616391182219-e080b4d1043a?q=80&w=3783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         'latest-procedures': "url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",

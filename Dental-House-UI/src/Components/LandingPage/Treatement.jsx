@@ -70,15 +70,15 @@ const Treatement = () => {
 
   return (
     <div
-      className={`w-full h-screen bg-bg-blue flex justify-center pb-4 transfor transition-all duration-300 ${bg} bg-cover`}
+      className={`w-full h-screen bg-bg-blue flex justify-center pb-4 transfor transition-all duration-300 bg-root-canal bg-cover`}
     >
-      <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-800">
-        <h1 className="text-5xl mt-4 mb-2 font-semibold p-4 font-caveat flex flex-col jc items-center justify-center bg-white bg-opacity-60 w-full">
+      <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-900">
+        <h1 className="text-5xl mt-4 mb-2 font-semibold p-4 font-caveat flex flex-col jc items-center justify-center bg-white bg-opacity-70 w-full">
           <span>Our Cutting-Edge Dental Procedures</span>{" "}
           <span>for Exceptional Results</span>
         </h1>
         <div>
-          <div className="grid grid-rows-2 grid-flow-col">
+          <div className="grid grid-rows-2 grid-flow-col gap-4">
             {/* ITERATING OVER THE LIST OF MODALITIES */}
             {modalities.map((modality, key) => (
               <ModalityCard
@@ -109,57 +109,31 @@ export const ModalityCard = ({ modality, setBg, bg }) => {
   }, [cardHovered]);
   return (
     <div
-      // className={`h-20 hover:h-44 w-20 hover:w-8/12 transfor transition-all duration-500 ${image} bg-cover hover:bg-sky-500 hover:text-white rounded-md font-comfortaa text-sm text-center text-white  overflow-y-hidden`}
-      className={`w-full`}
+      className={`flex w- flex-col justify-center items-center px-2 mt-4 font-comfortaa  bg-opacity-55 transform transition-all ease-in-out duration-300 ${
+        cardHovered
+          ? "bg-sky-500 -translate-y-3 bg-opacity-95"
+          : "bg-black translate-y- bg-opacity-55 "
+      }`}
+      id={image}
+      onMouseEnter={() => setCardHovered(true)}
+      onMouseLeave={() => setCardHovered(false)}
     >
-      {icon ? (
-        <div
-          className="flex w- flex-col justify-center items-center px-2 mb-3 mt-2 font-comfortaa bg-black opacity-60"
-          id={image}
-          onMouseEnter={() => setCardHovered(true)}
-          onMouseLeave={() => setCardHovered(false)}
-        >
-          <div
-            className="text-3xl mx-4 "
-          >
-            <p className="text-sm text-center w-full">
-              <Tribute link={tribute_link} text={tribute_text} />
-            </p>
-            <img
-              src={icon}
-              className="w-12 p-2 rounded-full bg-white bg-opacity-70"
-            />
-          </div>
-          <p className="text-lg font-extrabold mt-2 text-cente w-max text-white opacity-70">{name}</p>
-          <p
-            className={`flex flex-col h-28 jc items-center px-6 py-3 bg-black opacity-60 text-white transform transition-all ease-in-out duration-300 ${
-              cardHovered ? "opacity-60" : "opacity-0"
-            }`}
-          >
-            <span>{text}</span>
-          </p>
-        </div>
-      ) : (
-        <div></div>
-      )}
-      {/* <p className="text-sm text-center w-full">
+      <p className="text-sm text-center w-full">
         <Tribute link={tribute_link} text={tribute_text} />
       </p>
-      <div
-        className={`w-full h-full flex flex-col justify-start items-center transform transition-transform ease-in-out duration-500 opacity-60 ${
-          cardHovered ? "-translate-y-0 bg-black opacity-50" : "translate-y-28  bg-black opacity-60"
+      <div className="text-3xl mx-4">
+        <img src={icon} className="w-12 p-2 rounded-full bg-white" />
+      </div>
+      <p className="text-lg font-extrabold mt-2 text-cente w-max text-white opacity-90">
+        {name}
+      </p>
+      <p
+        className={`flex flex-col h-28 jc items-center px-6 py-3 text-white transform transition-all ease-in-out duration-300 ${
+          cardHovered ? "opacity-`80" : "opacity-80"
         }`}
       >
-        <div className="flex flex-col w-full justify-start items-center px-2 mb-3 mt-2">
-          <div className="text-3xl mx-4">
-            <img src={icon} className="w-12 p-2 rounded-full bg-white" />
-          </div>
-          <p className="text-lg font-extrabold mt-2">{name}</p>
-        </div>
-        <p className="flex flex-col jc items-center pr-3">
-          <span>{text}</span>
-        </p>
-      </div> */}
+        <span>{text}</span>
+      </p>
     </div>
   );
 };
@@ -167,9 +141,9 @@ export const ModalityCard = ({ modality, setBg, bg }) => {
 export const Tribute = ({ link, text }) => {
   const [tributeHovered, setTributeHovered] = useState(false);
   return (
-    <div className={`h-5 w-full flex justify-end`}>
+    <div className={`h-5 w-full flex justify-end mx-3 pr-2`}>
       <div
-        className={`flex justify-end items-center absolute opacity-80  p-1 ${
+        className={`flex justify-end items-center opacity-80  p-1 ${
           tributeHovered
             ? "w-full opacity-80 text-xxs text-black"
             : " rounded-full text-xs text-slate-400"

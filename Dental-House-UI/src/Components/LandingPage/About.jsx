@@ -73,11 +73,11 @@ const About = () => {
                   If you are seeking
                   <TypeAnimation
                     sequence={[
-                      " quality?",
+                      " quality",
                       2000,
-                      " ethical standards?",
+                      " ethical standards",
                       3000,
-                      " value for your time?",
+                      " value for your time",
                       3000,
                     ]}
                     wrapper="span"
