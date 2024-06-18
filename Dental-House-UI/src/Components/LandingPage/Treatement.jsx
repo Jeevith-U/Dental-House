@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import implant from "../images/dental-implant.png";
 import cleaning from "../images/tooth-brush.png";
 import filling from "../images/cavity.png";
@@ -8,7 +8,6 @@ import braces from "../images/braces.png";
 import { GoInfo } from "react-icons/go";
 
 const Treatement = () => {
-  const [bg, setBg] = useState("");
   const modalities = [
     // {},
     {
@@ -19,7 +18,7 @@ const Treatement = () => {
       name: "Dental Bonding",
       text: "Dental bonding is a technique used to correct imperfections with your teeth to give you a better-looking smile",
     },
-    // {},
+    // <a href="" title="root canal icons"></a>
     {
       icon: rootcanal,
       image: "bg-root-canal",
@@ -70,26 +69,20 @@ const Treatement = () => {
 
   return (
     <div
-      className={`w-full h-screen bg-bg-blue flex justify-center pb-4 transfor transition-all duration-300 bg-root-canal bg-cover`}
+      className={`w-full h-max flex justify-center pb-4 mt-10 mb-10 transfor transition-all duration-300 bg-gray-100`}
     >
       <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-900">
-        <h1 className="text-5xl mt-4 mb-2 font-semibold p-4 font-caveat flex flex-col jc items-center justify-center bg-white bg-opacity-70 w-full">
+        <h1 className="text-5xl my-5 font-semibold p-4 font-caveat flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
           <span>Our Cutting-Edge Dental Procedures</span>{" "}
           <span>for Exceptional Results</span>
         </h1>
-        <div>
-          <div className="grid grid-rows-2 grid-flow-col gap-4">
+        <div className="flex justify-center items-center w-full">
+          <div className="grid grid-rows-2 grid-flow-col-dense gap-8 w-11/12">
             {/* ITERATING OVER THE LIST OF MODALITIES */}
             {modalities.map((modality, key) => (
-              <ModalityCard
-                modality={modality}
-                setBg={setBg}
-                bg={bg}
-                key={key}
-              />
+              <ModalityCard modality={modality} key={key} index={key} />
             ))}
           </div>
-          <div className=""></div>
         </div>
       </div>
     </div>
@@ -98,21 +91,19 @@ const Treatement = () => {
 
 export default Treatement;
 
-export const ModalityCard = ({ modality, setBg, bg }) => {
+export const ModalityCard = ({ modality, index }) => {
   const [cardHovered, setCardHovered] = useState(false);
 
   const { icon, image, tribute_link, tribute_text, name, text } = modality;
 
-  useEffect(() => {
-    const e = document.getElementById(image);
-    e && setBg(image);
-  }, [cardHovered]);
   return (
     <div
-      className={`flex w- flex-col justify-center items-center px-2 mt-4 font-comfortaa  bg-opacity-55 transform transition-all ease-in-out duration-300 ${
+      className={`flex flex-col justify-center items-center px-2 font-comfortaa  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
         cardHovered
-          ? "bg-sky-500 -translate-y-3 bg-opacity-95"
-          : "bg-black translate-y- bg-opacity-55 "
+          ? "bg-sky-400 scale-110 bg-opacity-95 text-white "
+          : index === 3 || 5 || 2
+          ? "bg-bg-blue scale-100 text-slate-700"
+          : "bg-white scale-100 text-slate-700"
       }`}
       id={image}
       onMouseEnter={() => setCardHovered(true)}
@@ -121,17 +112,24 @@ export const ModalityCard = ({ modality, setBg, bg }) => {
       <p className="text-sm text-center w-full">
         <Tribute link={tribute_link} text={tribute_text} />
       </p>
-      <div className="text-3xl mx-4">
-        <img src={icon} className="w-12 p-2 rounded-full bg-white" />
+      <div className="px-4 w-full flex justify-start items-center">
+        <img
+          src={icon}
+          className={`p-2 mx-2   transform transition-all ease-in-out duration-300 ${
+            cardHovered
+              ? "w-14 rounded-full bg-white"
+              : "w-20 rounded-lg bg-transparent"
+          }`}
+        />
+        <p
+          className={`${
+            cardHovered ? "text-lg" : "text-xl"
+          } font-extrabold mt-2 text-cente w-ma opacity-90`}
+        >
+          {name}
+        </p>
       </div>
-      <p className="text-lg font-extrabold mt-2 text-cente w-max text-white opacity-90">
-        {name}
-      </p>
-      <p
-        className={`flex flex-col h-28 jc items-center px-6 py-3 text-white transform transition-all ease-in-out duration-300 ${
-          cardHovered ? "opacity-`80" : "opacity-80"
-        }`}
-      >
+      <p className={`flex flex-col h-32 justify-start items-center px-6 py-3 text-sm`}>
         <span>{text}</span>
       </p>
     </div>
@@ -145,8 +143,8 @@ export const Tribute = ({ link, text }) => {
       <div
         className={`flex justify-end items-center opacity-80  p-1 ${
           tributeHovered
-            ? "w-full opacity-80 text-xxs text-black"
-            : " rounded-full text-xs text-slate-400"
+            ? "w-full opacity-80 text-xxs text-white"
+            : " rounded-full text-xs text-white"
         }`}
         onMouseEnter={() => setTributeHovered(true)}
         onMouseLeave={() => setTributeHovered(false)}
