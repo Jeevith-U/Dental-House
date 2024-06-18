@@ -112,22 +112,15 @@ export const ModalityCard = ({ modality, setBg, bg }) => {
       // className={`h-20 hover:h-44 w-20 hover:w-8/12 transfor transition-all duration-500 ${image} bg-cover hover:bg-sky-500 hover:text-white rounded-md font-comfortaa text-sm text-center text-white  overflow-y-hidden`}
       className={`w-full`}
     >
-      <p
-        className={`flex flex-col h-28 jc items-center px-6 py-3 bg-black opacity-60 text-white transform transition-all ease-in-out duration-300 ${
-          bg === image && cardHovered ? "opacity-60" : "opacity-0"
-        }`}
-      >
-        <span>{text}</span>
-      </p>
       {icon ? (
         <div
-          className="flex w- flex-col justify-center items-center px-2 mb-3 mt-2 font-comfortaa"
+          className="flex w- flex-col justify-center items-center px-2 mb-3 mt-2 font-comfortaa bg-black opacity-60"
           id={image}
+          onMouseEnter={() => setCardHovered(true)}
+          onMouseLeave={() => setCardHovered(false)}
         >
           <div
             className="text-3xl mx-4 "
-            onMouseEnter={() => setCardHovered(true)}
-            onMouseLeave={() => setCardHovered(false)}
           >
             <p className="text-sm text-center w-full">
               <Tribute link={tribute_link} text={tribute_text} />
@@ -137,8 +130,13 @@ export const ModalityCard = ({ modality, setBg, bg }) => {
               className="w-12 p-2 rounded-full bg-white bg-opacity-70"
             />
           </div>
-          <p className="text-lg font-extrabold mt-2 text-cente w-max">
-            {name}
+          <p className="text-lg font-extrabold mt-2 text-cente w-max text-white opacity-70">{name}</p>
+          <p
+            className={`flex flex-col h-28 jc items-center px-6 py-3 bg-black opacity-60 text-white transform transition-all ease-in-out duration-300 ${
+              cardHovered ? "opacity-60" : "opacity-0"
+            }`}
+          >
+            <span>{text}</span>
           </p>
         </div>
       ) : (
