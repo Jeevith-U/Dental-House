@@ -9,7 +9,6 @@ import { GoInfo } from "react-icons/go";
 
 const Treatement = () => {
   const modalities = [
-    // {},
     {
       icon: braces,
       image: "bg-braces",
@@ -18,7 +17,6 @@ const Treatement = () => {
       name: "Dental Bonding",
       text: "Dental bonding is a technique used to correct imperfections with your teeth to give you a better-looking smile",
     },
-    // <a href="" title="root canal icons"></a>
     {
       icon: rootcanal,
       image: "bg-root-canal",
@@ -27,7 +25,6 @@ const Treatement = () => {
       name: "Root Canal",
       text: "A root canal is a dental procedure that is used to repair teeth that are infected. Some people fear root canal treatments because they assume they are painful.",
     },
-    // {},
     {
       icon: implant,
       image: "bg-dental-crown",
@@ -36,9 +33,6 @@ const Treatement = () => {
       name: "Dental Crown",
       text: "A dental crown is a dental prosthesis which replaces the visible part of a tooth. It restores their original shape, strength, and improve their appearance.",
     },
-    // {},
-    // {},
-    // {},
     {
       icon: denture,
       image: "bg-dentures",
@@ -47,7 +41,6 @@ const Treatement = () => {
       name: "Dentures",
       text: "Have you lost most or all of your teeth? Dentures are removable appliances that can replace missing teeth.",
     },
-    // {},
     {
       icon: filling,
       image: "bg-teeth-filling",
@@ -56,7 +49,6 @@ const Treatement = () => {
       name: "Cosmetic Filling",
       text: "Cosmetic fillings are made of composite resin and glass particles. They are cemented onto the existing teeth using a bonding agent.",
     },
-    // {},
     {
       icon: cleaning,
       image: "bg-teeth-cleaning",
@@ -69,10 +61,10 @@ const Treatement = () => {
 
   return (
     <div
-      className={`w-full h-max flex justify-center pb-4 mt-10 mb-10 transfor transition-all duration-300 bg-gray-100`}
+      className={`w-full h-max flex justify-center pb-4 mb-10 transfor transition-all duration-300 bg-white`}
     >
-      <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-900">
-        <h1 className="text-5xl my-5 font-semibold p-4 font-caveat flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
+      <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-700">
+        <h1 className="text-5xl my-10 font-semibold p-4 font-caveat flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
           <span>Our Cutting-Edge Dental Procedures</span>{" "}
           <span>for Exceptional Results</span>
         </h1>
@@ -100,11 +92,11 @@ export const ModalityCard = ({ modality, index }) => {
     <div
       className={`flex flex-col justify-center items-center px-2 font-comfortaa  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
         cardHovered
-          ? "bg-sky-400 scale-110 bg-opacity-95 text-white "
-          : index === 3 || 5 || 2
-          ? "bg-bg-blue scale-100 text-slate-700"
-          : "bg-white scale-100 text-slate-700"
-      }`}
+          ? " bg-opacity-95 scale-110"
+          : "scale-100"
+      } ${index === 3 || index === 4 || index === 0
+        ? "bg-sky-200 text-slate-700"
+        : "bg-white"}`}
       id={image}
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
@@ -115,7 +107,7 @@ export const ModalityCard = ({ modality, index }) => {
       <div className="px-4 w-full flex justify-start items-center">
         <img
           src={icon}
-          className={`p-2 mx-2   transform transition-all ease-in-out duration-300 ${
+          className={`p-2 mx-2 transform transition-all ease-in-out duration-300 ${
             cardHovered
               ? "w-14 rounded-full bg-white"
               : "w-20 rounded-lg bg-transparent"
@@ -123,13 +115,15 @@ export const ModalityCard = ({ modality, index }) => {
         />
         <p
           className={`${
-            cardHovered ? "text-lg" : "text-xl"
+            cardHovered ? "text-xl" : "text-xl"
           } font-extrabold mt-2 text-cente w-ma opacity-90`}
         >
           {name}
         </p>
       </div>
-      <p className={`flex flex-col h-32 justify-start items-center px-6 py-3 text-sm`}>
+      <p
+        className={`flex flex-col h-32 justify-start items-center px-6 py-3 text-sm`}
+      >
         <span>{text}</span>
       </p>
     </div>
@@ -144,7 +138,7 @@ export const Tribute = ({ link, text }) => {
         className={`flex justify-end items-center opacity-80  p-1 ${
           tributeHovered
             ? "w-full opacity-80 text-xxs text-white"
-            : " rounded-full text-xs text-white"
+            : "rounded-full text-xs text-white"
         }`}
         onMouseEnter={() => setTributeHovered(true)}
         onMouseLeave={() => setTributeHovered(false)}

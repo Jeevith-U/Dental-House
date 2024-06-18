@@ -3,7 +3,7 @@ import logo from "../images/logo.jpg";
 
 const Header2 = () => {
   return (
-      <header className="bg-bg-blue text-gray-700 absolute w-full flex justify-center items-center font-cormorant-garamond">
+      <header className="bg-transparent bg-opacity-55 text-gray-700 absolute w-full flex justify-center items-center font-cormorant-garamond">
         <div className="w-11/12 py-1 flex justify-between items-center">
           <div className="flex items-center">
             <div className="border-r-2 border-slate-50 pr-2">
