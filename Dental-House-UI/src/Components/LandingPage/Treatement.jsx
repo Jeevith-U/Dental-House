@@ -64,7 +64,7 @@ const Treatement = () => {
       className={`w-full h-max flex justify-center pb-4 mb-10 transfor transition-all duration-300 bg-white`}
     >
       <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-700">
-        <h1 className="text-5xl my-10 font-semibold p-4 font-caveat flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
+        <h1 className="text-5xl my-10 font-semibold p-4 font-head flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
           <span>Our Cutting-Edge Dental Procedures</span>{" "}
           <span>for Exceptional Results</span>
         </h1>
@@ -90,7 +90,7 @@ export const ModalityCard = ({ modality, index }) => {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center px-2 font-comfortaa  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
+      className={`flex flex-col justify-center items-center px-2 font-body  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
         cardHovered
           ? " bg-opacity-95 scale-110"
           : "scale-100"

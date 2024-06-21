@@ -33,7 +33,9 @@ export default {
         "caveat": ["Caveat", "cursive"],
         "open-sans": ["Open Sans", "sans-serif"],
         "poppins": ["Poppins", "sans-serif"],
-        "comfortaa": ["Comfortaa", "sans-serif"]
+        "comfortaa": ["Comfortaa", "sans-serif"],
+        "head": ["Caveat", "cursive"],
+        "body": ["Comfortaa", "sans-serif"]
       },
       fontSize: {
         "xxs": "8px"

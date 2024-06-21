@@ -7,17 +7,17 @@ const Landingpage = () => {
       <div className="mt-8 flex w-11/12 h-full justify-center items-center">
         <div className="w-3/5 px-10">
           <div className="w-full py-2">
-            <h1 className="text-6xl font-medium mb-4 w-full font-caveat">
+            <h1 className="text-6xl font-medium mb-4 w-full font-head">
               Dr. Varsha Gupta
             </h1>
             
           </div>
           <div className="w-full py-2 mb-10">
-            <p className="text-2xl font-medium mb-2 font-caveat">
+            <p className="text-2xl font-medium mb-2 font-head">
               Dental surgeon <span className="text-sky-500">|</span> Bachelor Of
               Dental Surgery (BDS)
             </p>
-            <p className="text-sm font-comfortaa">
+            <p className="text-sm font-body">
               Dr. Varsha is a dedicated and compassionate dental surgeon with a
               Bachelor Of Dental Surgery (BDS) degree and a prestigious
               fellowship in aesthetic and cosmetic dentistry. Dr. Varsha also
@@ -26,7 +26,7 @@ const Landingpage = () => {
               smiles with advanced treatments.
             </p>
           </div>
-          <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 py-2 px-4 rounded-lg font-comfortaa font-extrabold transition-colors duration-300 ease-in-out">
+          <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out">
             Request Appointment
           </button>
         </div>

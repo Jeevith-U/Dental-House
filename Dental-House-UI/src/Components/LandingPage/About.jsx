@@ -4,11 +4,11 @@ import { TypeAnimation } from "react-type-animation";
 const About = () => {
   return (
     <div className="w-full bg-white flex flex-col justify-center items-center py-10">
-      <p className="text-5xl font-semibold mb-10 font-caveat flex flex-col justify-start">
+      <p className="text-5xl font-semibold mb-10 font-head flex flex-col justify-start">
         Why choose dental house?
       </p>
       <div className="flex justify-center items-center">
-        <div className="px-4 w-full h-full flex flex-col justify-center items-center font-comfortaa font-extrabold">
+        <div className="px-4 w-full h-full flex flex-col justify-center items-center font-body font-extrabold">
           <div className="flex w-full h-full justify-evenly items-center">
             <ul className="flex w-full h-full flex-col justify-evenly items-stretch">
               <Card
@@ -60,7 +60,7 @@ const About = () => {
         </div>
         <div className="flex w-11/12 flex-row-reverse justify-center items-center">
           <div>
-            <div className="px-8 mb-8 w-full flex flex-col font-comfortaa text-center text-md justify-center items-center">
+            <div className="px-8 mb-8 w-full flex flex-col font-body text-center text-md justify-center items-center">
               <p>
                 We at Dental House offer the finest dental care to our patients
                 in Mysore. Our aim is to provide high quality dental treatment

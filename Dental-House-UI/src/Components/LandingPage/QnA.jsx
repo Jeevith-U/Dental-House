@@ -4,7 +4,7 @@ const QnA = () => {
   return (
     <div className="w-full bg-white flex justify-center items-center py-4 mb-4">
       <div className="flex flex-col w-11/12 justify-center items-center">
-        <h1 className="text-5xl font-semibold mb-4 font-caveat text-left w-full">
+        <h1 className="text-5xl font-semibold mb-4 font-head text-left w-full">
           QnA
         </h1>
 
@@ -50,7 +50,7 @@ export default QnA;
 
 export const QnACard = ({ question, answer }) => {
   return (
-    <div className="inline-flex px-4 py-2 font-comfortaa">
+    <div className="inline-flex px-4 py-2 font-body">
       <div className="flex flex-col justify-start">
         <p className="font-extrabold text-slate-700 mb-2">{question + "❓"}</p>
         <p className="text-sm text-slate-600">{answer}</p>
