@@ -60,12 +60,11 @@ const About = () => {
         </div>
         <div className="flex w-11/12 flex-row-reverse justify-center items-center">
           <div>
-            <div className="px-8 mb-8 w-full flex flex-col font-body text-center text-md justify-center items-center">
+            <div className="px-8 w-full flex flex-col font-body text-center text-md justify-center items-center">
               <p>
-                We at Dental House offer the finest dental care to our patients
-                in Mysore. Our aim is to provide high quality dental treatment
-                in a tranquil, relaxed and friendly environment. We are
-                specialized in all the latest dental procedures.
+                The finest dental care to our patients
+                in Mysore, providing a high quality dental treatment
+                in a tranquil, relaxed and friendly environment.
               </p>
               <p className="mt-4 mb-4 text-2xl  font-extrabold text-slate-700">
                 {/* <span className="text-slate-700 text-3xl">{"[ "}</span> */}

@@ -18,6 +18,7 @@ const App = () => {
       {/* <hr /> */}
       <QnA />
       <Tips />
+      {/* <CustomSlider/> */}
     </>
   );
 };

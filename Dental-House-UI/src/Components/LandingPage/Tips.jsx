@@ -1,41 +1,61 @@
-import React from 'react'
+import React from "react";
 
 const Tips = () => {
-  return (
-    <div>
-      <div className='h-screen w-full min-h-screen bg-gradient-to-b from-indigo-400 from-5% to-slate-50 to-70% flex justify-center items-center font-serif'>
-          <div className='grid grid-cols-3 gap-4'>
-            <div className='bg-slate-400  shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
-              <h1 className='text-xl  font-semibold'>Brush Regularly and Properly😁  :</h1>
-              <div><p>Brush your teeth at least twice a day—once in the morning and once before bed.
-              Ensure you're brushing for at least two minutes each time, using a soft-bristled toothbrush and gentle circular motions to avoid damaging your gums.</p></div>
-            </div>
-            <div className='bg-slate-400 shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
-            <h1 className='text-xl  font-semibold'>Floss Daily:</h1>
-              <div><p>Flossing removes food particles and plaque from between your teeth and under the gumline, areas that a toothbrush can't reach.Use dental floss or interdental brushes to clean between your teeth at least once a day.</p></div>
-            </div>
-            <div className='bg-slate-400  shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
-              <h1 className='text-xl  font-semibold'>Limit Sugary and Acidic Foods 🧊🍹 :</h1>
-              <div><p>Sugary foods and drinks feed harmful bacteria in your mouth. These bacteria produce acids as they digest the sugars, which can erode the tooth enamel and lead to cavities. By reducing sugar intake, you limit the fuel for these bacteria, thereby reducing the risk of tooth decay.</p></div>
-            </div>
-            <div className='bg-slate-400 shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
-            <h1 className='text-xl  font-semibold'>Maintain a Healthy Diet 🍛 :</h1>
-              <div><p>Eat plenty of fruits, vegetables, dairy products, and lean proteins to provide essential nutrients like calcium and vitamin D, which are vital for strong teeth.Limit sugary and acidic foods and drinks, as they can erode enamel and lead to cavities.</p></div>
-            </div>
-            <div className='bg-slate-400 shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
-            <h1 className='text-xl  font-semibold'>Avoid Tobacco Products 🚭 :</h1>
-              <div><p>Tobacco use significantly increases the risk of developing gum disease. The chemicals in tobacco can impair blood flow to the gums, leading to inflammation, infection, and the destruction of gum tissue and bone that support the teeth.</p></div>
-            </div>
-            <div className='bg-slate-400 shadow-2xl transfor transition-transform duration-300 hover:scale-110 p-4 rounded-md font-serif text-white'>
+  const tips = [
+    {
+      headline: "Brush Regularly and Properly",
+      explainer:
+        "Brush twice a day with a soft-bristled toothbrush for at least two minutes to protect your gums and teeth from decay.",
+    },
+    {
+      headline: "Floss Daily",
+      explainer:
+        "Floss daily to remove food particles and plaque from areas your toothbrush can't reach, ensuring healthy gums.",
+    },
+    {
+      headline: "Limit Sugary and Acidic Foods",
+      explainer:
+        "Reduce sugary and acidic foods to prevent tooth decay and enamel erosion, maintaining a strong, healthy smile.",
+    },
+    {
+      headline: "Maintain a Healthy Diet",
+      explainer:
+        "Eat fruits, veggies, dairy, and lean proteins to provide essential nutrients for strong teeth and overall oral health.",
+    },
+    {
+      headline: "Avoid Tobacco Products",
+      explainer:
+        "Avoid tobacco to reduce the risk of gum disease and protect your oral health from harmful chemicals.",
+    },
+    {
+      headline: "Visit Your Dentist Regularly",
+      explainer:
+        "Schedule check-ups every 3-6 months for early detection and prevention of dental issues, keeping your smile bright.",
+    },
+  ];
 
-            <h1 className='text-xl  font-semibold'>Visit your dentist for regular checkup every 3-6 months 🧑🏻‍⚕️ :</h1>
-              <div><p>Regular dental visits allow for early detection of issues such as cavities, gum disease, oral cancer, and other dental problems. Early treatment can prevent these conditions from worsening, reducing the need for more complex and costly procedures later on.</p></div>
-            </div>
-            
-          </div>
+  return (
+    <div
+      className={`w-full h-max flex justify-center pb-4 mb-10 transfor transition-all duration-300 bg-white`}
+    >
+      <div className="w-11/12 h-max mb-4 flex flex-col justify-center items-center text-slate-700">
+        <h1 className="text-5xl my-10 font-semibold p-4 font-head flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
+          Top Tips To Elevate Your Oral Health
+        </h1>
+        <div className="flex justify-center items-start">
+          {tips.map((tip, index) => {
+            const { headline, explainer } = tip;
+            return (
+              <div key={index}>
+                <p className="text-xl">{headline}</p>
+                <p>{explainer}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Tips
+export default Tips;

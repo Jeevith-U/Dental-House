@@ -17,46 +17,14 @@ const CustomSlider = ({slides}) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />
   };
 
   return (
-    <div className="relative w-full mx-auto mt-10">
-      <Slider {...settings}>
-        {slides.map((slide) => (
-          <div key={slide.id}>
-            <SlideContent content={slide.content} />
-          </div>
-        ))}
-      </Slider>
+    <div className="h-screen">
+      <Slider/>
     </div>
-  );
-};
-
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button
-      className={`${className} absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full`}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    >
-      Next
-    </button>
-  );
-};
-
-const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button
-      className={`${className} absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full`}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    >
-      Prev
-    </button>
   );
 };
 

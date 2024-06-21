@@ -91,18 +91,18 @@ export const ModalityCard = ({ modality, index }) => {
   return (
     <div
       className={`flex flex-col justify-center items-center px-2 font-body  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
-        cardHovered
-          ? " bg-opacity-95 scale-110"
-          : "scale-100"
-      } ${index === 3 || index === 4 || index === 0
-        ? "bg-sky-200 text-slate-700"
-        : "bg-white"}`}
+        cardHovered ? " bg-opacity-95 scale-110" : "scale-100"
+      } ${
+        index === 3 || index === 4 || index === 0
+          ? "bg-sky-200 text-slate-700"
+          : "bg-white"
+      }`}
       id={image}
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
     >
       <p className="text-sm text-center w-full">
-        <Tribute link={tribute_link} text={tribute_text} />
+        <Tribute link={tribute_link} text={tribute_text} show={cardHovered} />
       </p>
       <div className="px-4 w-full flex justify-start items-center">
         <img
@@ -130,16 +130,16 @@ export const ModalityCard = ({ modality, index }) => {
   );
 };
 
-export const Tribute = ({ link, text }) => {
+export const Tribute = ({ link, text, show }) => {
   const [tributeHovered, setTributeHovered] = useState(false);
   return (
     <div className={`h-5 w-full flex justify-end mx-3 pr-2`}>
       <div
         className={`flex justify-end items-center opacity-80  p-1 ${
-          tributeHovered
-            ? "w-full opacity-80 text-xxs text-white"
-            : "rounded-full text-xs text-white"
-        }`}
+          show
+            ? "w-full opacity-80 text-slate-500"
+            : "rounded-full text-transparent"
+        } ${tributeHovered ? "text-xxs" : "text-xs"}`}
         onMouseEnter={() => setTributeHovered(true)}
         onMouseLeave={() => setTributeHovered(false)}
       >
