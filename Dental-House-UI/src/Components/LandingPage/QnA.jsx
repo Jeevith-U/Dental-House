@@ -7,17 +7,21 @@ const QnA = () => {
         <h1 className="text-5xl font-semibold mb-4 font-caveat text-left w-full">
           QnA
         </h1>
-        <div className="flex overflow-x-auto overflow-y-hidden w-full">
+
+        {/* <div className="w-20 p-0.5 bg-slate-400 h-full">
+          <div className="h-12 w-40 bg-bg-orange p left-5"></div>
+        </div> */}
+        <div className="grid border-l-bg-orange border-l-2 h-max w-4/5">
           <QnACard
             question={"Should we clean the tooth on a daily basis"}
             answer={
-              "Yes! you should get the teeth cleaned every 6-12 months. Because plaque and calculus will damage your gums"
+              "Yes! you should get the teeth cleaned every 6-12 months. Because plaque and calculus will damage your gums."
             }
           />
           <QnACard
             question={"Will the tooth shake after cleaning"}
             answer={
-              "If you get your teeth cleaned every 6-12 months. Your gums will be strong and that will make your teeth strong. Because in the cleaning procedure we remove the plaque and calculus which gets deposited between teeth and gums"
+              "If you get your teeth cleaned every 6-12 months. Your gums will be strong and that will make your teeth strong. Because in the cleaning procedure we remove the plaque and calculus which gets deposited between teeth and gums."
             }
           />
           <QnACard
@@ -46,10 +50,10 @@ export default QnA;
 
 export const QnACard = ({ question, answer }) => {
   return (
-    <div className="inline-flex h-40 px-4 py-2 font-comfortaa border-l-2 border-bg-orange">
-      <div className="flex flex-col justify-start w-80">
+    <div className="inline-flex px-4 py-2 font-comfortaa">
+      <div className="flex flex-col justify-start">
         <p className="font-extrabold text-slate-700 mb-2">{question + "❓"}</p>
-        <p className="text-sm text-slate-600">{answer + "."}</p>
+        <p className="text-sm text-slate-600">{answer}</p>
       </div>
     </div>
   );
