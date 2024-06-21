@@ -13,12 +13,9 @@ const App = () => {
       <Header2 />
       <Landingpage />
       <About/>
-      {/* <hr /> */}
       <Treatement />
-      {/* <hr /> */}
       <QnA />
       <Tips />
-      {/* <CustomSlider/> */}
     </>
   );
 };

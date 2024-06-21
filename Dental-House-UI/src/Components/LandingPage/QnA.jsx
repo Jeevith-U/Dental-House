@@ -15,7 +15,7 @@ const QnA = () => {
   };
 
   return (
-    <div className="w-full text-black bg-slate-100 h-max">
+    <div className="w-full text-black bg-slate-100">
       <Slider {...settings}>
         <QnACard
           question={"Should we clean the tooth on a daily basis"}
