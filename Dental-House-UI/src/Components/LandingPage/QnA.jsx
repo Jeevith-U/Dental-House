@@ -11,11 +11,11 @@ const QnA = () => {
     speed: 4000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    pauseOnHover: true
+    pauseOnHover: true,
   };
-
+  
   return (
-    <div className="w-full text-black bg-slate-100">
+    <div className="border-y border-y-slate-200 hover:border-y-slate-300 bg-white">
       <Slider {...settings}>
         <QnACard
           question={"Should we clean the tooth on a daily basis"}

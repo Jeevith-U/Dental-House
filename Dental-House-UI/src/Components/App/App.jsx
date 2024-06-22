@@ -14,8 +14,8 @@ const App = () => {
       <Landingpage />
       <About/>
       <Treatement />
-      <QnA />
       <Tips />
+      <QnA />
     </>
   );
 };
