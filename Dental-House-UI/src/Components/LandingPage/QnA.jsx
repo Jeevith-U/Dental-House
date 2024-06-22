@@ -15,7 +15,7 @@ const QnA = () => {
   };
   
   return (
-    <div className="border-y border-y-slate-200 hover:border-y-slate-300 bg-white">
+    <div className="border-y border-y-slate-200 hover:border-y-slate-300 mb-16 bg-white">
       <Slider {...settings}>
         <QnACard
           question={"Should we clean the tooth on a daily basis"}
