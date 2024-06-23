@@ -16,9 +16,9 @@ export default {
         'brush': 'url(https://images.unsplash.com/photo-1593010997571-7ebe6c593d8e?q=80&w=3299&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'floss': "url(https://images.unsplash.com/photo-1626006864160-aa21716d0204?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         'sugar': 'url(https://images.unsplash.com/photo-1486428128344-5413e434ad35?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-        'diet': 'url(https://images.unsplash.com/photo-1519996409144-56c88c9aa612?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-        'tobacco': 'url(https://images.unsplash.com/photo-1622708037376-5cba1a57f735?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-        'dentist': 'url(https://images.unsplash.com/photo-1588776813677-77aaf5595b83?q=80&w=3082&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
+        'diet': 'url(https://images.unsplash.com/photo-1561043433-aaf687c4cf04?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+        'tobacco': 'url(https://images.unsplash.com/photo-1567021185300-23afa08f68ad?q=80&w=3437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+        'dentist': 'url(https://images.unsplash.com/photo-1684607633062-b31b5d134814?q=80&w=3862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
       },
       colors:{
         "blue_gray": "30526D",
