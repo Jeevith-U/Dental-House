@@ -8,9 +8,7 @@ const QnA = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    autoplaySpeed: 3000,
     pauseOnHover: true,
   };
   
