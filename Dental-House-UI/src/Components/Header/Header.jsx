@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo.jpg";
 
-const Header2 = () => {
+const Header = () => {
   return (
       <header className="bg-transparent bg-opacity-55 text-gray-700 absolute w-full flex justify-center items-center font-cormorant-garamond">
         <div className="w-11/12 py-1 flex justify-between items-center">
@@ -33,4 +33,4 @@ const Header2 = () => {
   );
 };
 
-export default Header2;
+export default Header;
