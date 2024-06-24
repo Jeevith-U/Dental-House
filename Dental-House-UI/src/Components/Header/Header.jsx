@@ -17,7 +17,7 @@ const Header = () => {
           </div>
           <nav className="font-comfortaa">
             <ul className="flex justify-center items-center space-x-8 font-semibold">
-              <li>About Us</li>
+              <button>About Us</button>
               <li>Modalities</li>
               <li>QnA</li>
               <li>Reviews</li>

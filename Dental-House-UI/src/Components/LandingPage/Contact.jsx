@@ -1,12 +1,13 @@
 import React from "react";
+import hospital from "../images/hospital.jpeg";
 
 const Contact = () => {
   return (
-    <div className="w-full bg-opacity-40 text-slate-800 flex justify-center items-start bg-bg-blue">
+    <div id="contact" className="w-full bg-opacity-40 text-slate-800 flex justify-center items-start bg-bg-blue">
       <div className="w-11/12 px-6 py-4 flex justify-center items-start bg-opacity-55">
         <div className="w-3/6 flex justify-center items-center">
-          <div className="w-3/5 h-96 bg-white">
-            <img src="#" />
+          <div className="w-3/5 mt-8 h-96 bg-white rounded-lg">
+            <img src={hospital} className="h-full rounded-lg" />
           </div>
         </div>
         <div className="w-3/6 flex flex-col justify-start items-start">
@@ -18,9 +19,9 @@ const Contact = () => {
           </div>
           {/* REQUEST APPOINTMENT */}
           <div className="w-full">
-            <h2 className="mt-8 font-body text-xl">Request Appointment</h2>
+            <h2 className="mt-8 mb-2 font-body text-xl">Request Appointment</h2>
             <form className="w-full flex flex-col justify-center items-center">
-              <div className="w-full flex justify-center items-center">
+              <div className="w-full text-sm flex justify-center items-center">
                 <input
                   type="text"
                   placeholder="Name: "
@@ -32,8 +33,11 @@ const Contact = () => {
                   className="outline-none mr-1 p-2 bg-transparent border-b-2 border-b-gray-700 w-full placeholder:text-slate-600 text-slate-800"
                 />
               </div>
-              <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 mt-4 py-2 px-8 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out ml-auto">
-                Send
+              <button
+                className="bg-sky-500 hover:bg-sky-400 text-slate-50 mt-6 py-2 px-8 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out ml-auto border-2 border-transparent hover:border-sky-500"
+                type="button"
+              >
+                Submit
               </button>
             </form>
           </div>

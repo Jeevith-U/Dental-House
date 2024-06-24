@@ -25,7 +25,10 @@ const Landingpage = () => {
                 smiles with advanced treatments.
               </p>
             </div>
-            <button className="bg-sky-500 hover:bg-slate-50 hover:text-slate-700 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out">
+            <button
+              className="bg-sky-500 hover:bg-sky-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-sky-500 transition-colors duration-300 ease-in-out"
+              type="button"
+            >
               Request Appointment
             </button>
           </div>
