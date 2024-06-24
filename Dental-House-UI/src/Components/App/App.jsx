@@ -5,17 +5,18 @@ import Treatement from "../LandingPage/Treatement";
 import QnA from "../LandingPage/QnA";
 import Tips from "../LandingPage/Tips";
 import About from "../LandingPage/About";
+import Contact from "../LandingPage/Contact";
 
 const App = () => {
   return (
     <>
-
       <Header2 />
       <Landingpage />
       <About/>
       <Treatement />
       <Tips />
       <QnA />
+      <Contact/>
     </>
   );
 };
