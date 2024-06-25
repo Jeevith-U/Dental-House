@@ -1,16 +1,15 @@
 import React from "react";
 import doctorimg from "../images/DoctorImg.jpeg";
+import profile from "../images/profile.png"
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-opacity-40 text-slate-800 flex justify-center">
-      <div className="h-full w-full flex justify-center items-center bg-bg-blue">
-        <div className="mt-8 flex w-11/12 h-full justify-center items-center">
+      <div className="h-full w-full flex justify-center items-center bg-bg1 bg-cover">
+        <div className="mt-8 flex w-11/12 h-max justify-center items-center">
           <div className="w-3/5 px-10">
-            <div className="w-full py-2">
-              <h1 className="text-6xl font-medium mb-4 w-full font-head">
+              <h1 className="text-6xl h-20 font-medium w-full font-head">
                 Dr. Varsha Gupta
               </h1>
-            </div>
             <div className="w-full py-2 mb-10">
               <p className="text-2xl font-medium mb-2 font-head">
                 Dental surgeon <span className="text-sky-500">|</span> Bachelor
@@ -26,23 +25,23 @@ const Landingpage = () => {
               </p>
             </div>
             <button
-              className="bg-sky-500 hover:bg-sky-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-sky-500 transition-colors duration-300 ease-in-out"
+              className="bg-star-blue hover:bg-emerald-400 hover:border-emerald-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-star-blue transition-colors duration-300 ease-in-out"
               type="button"
             >
               Request Appointment
             </button>
           </div>
           <div className="w-2/5 h-full flex flex-col items-center justify-end">
-            <div className="flex h-1/6 justify-end items-end mb-2 mr-24">
-              <div className="p-2 mb-4 mr-2 bg-slate-700 rounded-tl-full rounded-bl-full rounded-tr-full h-max opacity-85"></div>
-              <div className="p-6 bg-white opacity-80 rounded-tl-full rounded-br-full rounded-tr-full h-max"></div>
+            <div className="flex h-1/6 justify-end items-end mb-1 mr-24">
+              <div className="p-2 mb-4 mr-2 bg-slate-700 rounded-full h-max opacity-70"></div>
+              <div className="p-6 bg-white opacity-80 rounded-full h-max"></div>
             </div>
-            <div className="w-10/12 h-full">
-              <div className="shadow-md rounded-tl-full rounded-bl-full rounded-tr-full bg-slate-100 ">
+            <div className="w-9/12 h-full">
+              <div className="rounded-full bg-transparent overflow-x-hidden bg-white bg-opacity-60">
                 <img
-                  src={doctorimg}
+                  src={profile}
                   alt="Doctor-img"
-                  className="w-full rounded-tl-full rounded-bl-full rounded-tr-full pb-2 pl-2 transfor transition-transform duration-700 ease-in-out hover:-translate-x-2"
+                  className="w-full rounded-full"
                 />
               </div>
             </div>

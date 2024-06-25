@@ -44,7 +44,7 @@ const Tips = () => {
 
   return (
     <div
-      className={`w-full h-max flex justify-center pb-4 mb-10 transfor transition-all duration-300 bg-gray-100`}
+      className={`w-screen h-max flex justify-center mb-10 transfor transition-all duration-300 bg-gray-100`}
     >
       <div className="w-11/12 h-max mb-4 flex justify-center items-start text-slate-700">
         <div className="w-full flex flex-col justify-start items-center">
@@ -106,7 +106,7 @@ export const TipsCard = ({ headline, explainer, bg }) => {
       <div
         className={`h-full p-0.5 bg-transparent flex flex-col justify-end items-center font-body -translate-y-full`}
       >
-        <p className={`px-1.5 py-4 text-lg mb-auto w-full text-left font-bold pb-4 border-b-2 border-b-slate-700`}>
+        <p className={`px-1.5 py-2 text-lg mb-auto w-full text-left font-bold border-b-2 border-b-slate-700`}>
           {headline}
         </p>
         <p className="px-1.5 py-4 text-sm w-full text-left bg-gray-100 bg-opacity-80">
