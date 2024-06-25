@@ -22,7 +22,8 @@ export default {
       },
       colors:{
         "blue_gray": "30526D",
-        "bg-blue": " rgb(186 230 253)",
+        // "bg-blue": "#eaf8fe",
+        "bg-blue": "#daf2fd",
         "bg-orange": "#FF822E"
       },
       fontFamily:{

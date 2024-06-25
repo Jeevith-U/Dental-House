@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full bg-opacity-40 text-slate-800 flex justify-center items-start bg-bg-blue"
+      className="w-full text-slate-800 flex justify-center items-start bg-bg-blue"
     >
       <div className="w-11/12 px-6 py-4 flex justify-center items-start bg-opacity-55">
         <div className="w-3/6 flex justify-center items-center">

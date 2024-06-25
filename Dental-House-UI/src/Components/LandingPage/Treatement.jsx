@@ -90,11 +90,11 @@ export const ModalityCard = ({ modality, index }) => {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center px-2 font-body  bg-opacity-55 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
+      className={`flex flex-col justify-center items-center px-2 font-body  bg-opacity-60 transform transition-all ease-in-out duration-300 h-max shadow-lg rounded-lg ${
         cardHovered ? " bg-opacity-95 scale-110" : "scale-100"
       } ${
         index === 3 || index === 4 || index === 0
-          ? "bg-sky-200 text-slate-700"
+          ? "bg-bg-blue text-slate-700"
           : "bg-white"
       }`}
       id={image}

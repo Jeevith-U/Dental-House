@@ -3,7 +3,7 @@ import doctorimg from "../images/DoctorImg.jpeg";
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-opacity-40 text-slate-800 flex justify-center">
-      <div className="h-full w-full flex justify-center items-center bg-bg-blue bg-opacity-55">
+      <div className="h-full w-full flex justify-center items-center bg-bg-blue">
         <div className="mt-8 flex w-11/12 h-full justify-center items-center">
           <div className="w-3/5 px-10">
             <div className="w-full py-2">
