@@ -1,5 +1,4 @@
 import React from "react";
-import doctorimg from "../images/DoctorImg.jpeg";
 import profile from "../images/profile.png"
 const Landingpage = () => {
   return (
@@ -12,7 +11,7 @@ const Landingpage = () => {
               </h1>
             <div className="w-full py-2 mb-10">
               <p className="text-2xl font-medium mb-2 font-head">
-                Dental surgeon <span className="text-sky-500">|</span> Bachelor
+                Dental surgeon <span className="text-star-blue">|</span> Bachelor
                 Of Dental Surgery (BDS)
               </p>
               <p className="text-sm font-body">
