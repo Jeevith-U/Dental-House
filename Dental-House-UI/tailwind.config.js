@@ -18,13 +18,22 @@ export default {
         'sugar': 'url(https://images.unsplash.com/photo-1486428128344-5413e434ad35?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'diet': 'url(https://images.unsplash.com/photo-1561043433-aaf687c4cf04?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'tobacco': 'url(https://images.unsplash.com/photo-1567021185300-23afa08f68ad?q=80&w=3437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-        'dentist': 'url(https://images.unsplash.com/photo-1684607633062-b31b5d134814?q=80&w=3862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'
+        'dentist': 'url(https://images.unsplash.com/photo-1684607633062-b31b5d134814?q=80&w=3862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+        'bg1': 'url(./images/bg1.png)',
+        'smile': 'url(./images/Subtractsmile.png)',
+        'smile-gray': 'url(./images/smilegray.png)'
       },
       colors:{
-        "blue_gray": "30526D",
+        "blue_gray": "#30526D",
         // "bg-blue": "#eaf8fe",
-        "bg-blue": "#daf2fd",
-        "bg-orange": "#FF822E"
+        "bg-blue": "#ddf2ee",
+        // "bg-blue": "#d2e6f0",
+        "profile-bg": '#A8B1CC',
+        // "star-blue": "#2da9ea",
+        "star-blue": "#14c37e",
+        "bg-orange": "#FF822E",
+        "bg-gray": "#f5f5f5",
+        "bg-dark": "#012f33"
       },
       fontFamily:{
         "great-vibes": ["Great Vibes", "cursive"],
@@ -33,7 +42,7 @@ export default {
         "open-sans": ["Open Sans", "sans-serif"],
         "poppins": ["Poppins", "sans-serif"],
         "comfortaa": ["Comfortaa", "sans-serif"],
-        "head": ["Caveat", "cursive"],
+        "head": ["Cormorant Garamond", "serif"],
         "body": ["Comfortaa", "sans-serif"]
       },
       fontSize: {

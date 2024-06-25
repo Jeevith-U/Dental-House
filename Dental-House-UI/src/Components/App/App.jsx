@@ -6,6 +6,7 @@ import Tips from "../LandingPage/Tips";
 import About from "../LandingPage/About";
 import Contact from "../LandingPage/Contact";
 import Header from "../HeaderAndFooter/Header";
+import { Reviews } from "../LandingPage/Reviews";
 
 const App = () => {
   const landingpageRef = useRef(null);
@@ -39,6 +40,7 @@ const App = () => {
       <div ref={treatementRef}>
         <Treatement />
       </div>
+      <Reviews/>
       <div ref={tipsRef}>
         <Tips />
       </div>

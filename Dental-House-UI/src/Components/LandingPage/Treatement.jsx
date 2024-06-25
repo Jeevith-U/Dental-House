@@ -61,15 +61,15 @@ const Treatement = () => {
 
   return (
     <div
-      className={`w-full h-max flex justify-center pb-4 mb-10 transfor transition-all duration-300 bg-white`}
+      className={`w-full h-max flex justify-center transfor transition-all duration-300 bg-bg-gray`}
     >
-      <div className="w-full h-max mb-4 flex flex-col justify-center items-center text-slate-700">
-        <h1 className="text-5xl my-10 font-semibold p-4 font-head flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
-          <span>Our Cutting-Edge Dental Procedures</span>{" "}
-          <span>for Exceptional Results</span>
+      <div className="w-11/12 h-full flex flex-col justify-center items-center text-slate-700">
+        <h1 className="text-5xl mt-10 font-semibold p-4 font-head flex flex-col items-center justify-center bg-transparent bg-opacity-70 w-full">
+          <span className="h-16">Our Cutting-Edge Dental Procedures</span>{" "}
+          <span className="h-16">for Exceptional Results</span>
         </h1>
         <div className="flex justify-center items-center w-full">
-          <div className="grid grid-rows-2 grid-flow-col-dense gap-8 w-11/12">
+          <div className="grid grid-rows-2 grid-flow-col-dense gap-8 w-11/12 py-10 overflow-visible">
             {/* ITERATING OVER THE LIST OF MODALITIES */}
             {modalities.map((modality, key) => (
               <ModalityCard modality={modality} key={key} index={key} />
