@@ -46,4 +46,13 @@ public class Patient {
     @CreatedDate
     private LocalDate registeredDate;
     private LocalDate lastSittingDate;
+    
+    //ScheduleInfo
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "patient")
+    private List<Schedule> schedulList ;
+    
+    //SittingInfo
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "patient")
+    private List<Sitting> sittingList ;
 }

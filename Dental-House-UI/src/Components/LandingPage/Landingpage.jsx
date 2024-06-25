@@ -6,7 +6,7 @@ const Landingpage = () => {
       <div className="h-screen min-h-screen flex justify-center items-center w-11/12 mt-14">
         <div className="w-3/5">
           <div className="px-4 py-2">
-            <h1 className="text-4xl font-medium mb-4">Dr. Varsha Gupta</h1>
+            <h1 className="font-serif text-3xl font-medium mb-4">Dr. Varsha Gupta</h1>
             <p className="text-xl font-medium mb-2">About Us</p>
             <p className="mb-6 font-">
             We at Dental House offer  the finest dental care to our patients in Mysore. Our aim is to provide high quality dental treatment in a tranquil, relaxed and friendly environment. We specialized in all the latest dental procedures. If you are looking for quality, ethics and value for your time then Dental House is the right place for you. At Dental House we have had the joy of crafting beautiful smiles for hundreds of patients. Our commitment to excellence and personalized care ensures that each individual leaves our clinic with enhanced, confidence and satisfaction.

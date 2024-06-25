@@ -10,8 +10,8 @@ const Header2 = () => {
             <img src={logo} alt="logo" className="h-12 w-12 rounded-full" />
             </div>
             <div className="flex flex-col">
-              <span className="text-slate-50 text-xl font-normal px-2">Dental</span>
-              <span className="text-slate-50 text-xl font-normal px-2">House</span>
+              <span className="text-slate-50 text-4xl font-normal px-4">Dental House</span>
+              <span className="text-slate-50 text-xl font-normal px-2"></span>
             </div>
           </div>
           <nav className="font-sans">
