@@ -1,5 +1,6 @@
 package com.devbrain.dentahouse.exceptionhandlers;
 
+import com.devbrain.dentahouse.exceptions.ScheduleNotFoundByIdException;
 import com.devbrain.dentahouse.exceptions.UserNotLoggedInException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

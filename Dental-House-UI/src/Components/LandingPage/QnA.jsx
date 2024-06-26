@@ -60,5 +60,6 @@ export const QnACard = ({ question, answer }) => {
         <p className="text-sm text-slate-600">{answer}</p>
       </div>
     </div>
+
   );
 };
