@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import { FaStarHalfAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
-import { GoArrowRight } from "react-icons/go";
-import { HiArrowRight } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
 
 export const Reviews = () => {
   const reviews = [

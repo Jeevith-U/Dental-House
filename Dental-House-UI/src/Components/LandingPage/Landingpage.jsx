@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../images/profile.png"
+import profile from "../../../public/images/profile.png"
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-opacity-40 text-slate-800 flex justify-center">
