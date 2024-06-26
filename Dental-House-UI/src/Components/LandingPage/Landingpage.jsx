@@ -24,7 +24,7 @@ const Landingpage = () => {
               </p>
             </div>
             <button
-              className="bg-star-blue hover:bg-emerald-400 hover:border-emerald-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-star-blue transition-colors duration-300 ease-in-out"
+              className="bg-star-blue hover:bg-emerald-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-star-blue transition-colors duration-300 ease-in-out"
               type="button"
             >
               Request Appointment

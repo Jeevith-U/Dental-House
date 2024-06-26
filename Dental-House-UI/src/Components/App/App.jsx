@@ -14,6 +14,7 @@ const App = () => {
   const treatementRef = useRef(null);
   const tipsRef = useRef(null);
   const contactRef = useRef(null);
+  const reviewRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -28,6 +29,7 @@ const App = () => {
           aboutRef,
           treatementRef,
           tipsRef,
+          reviewRef,
           contactRef,
         }}
       />
@@ -40,7 +42,9 @@ const App = () => {
       <div ref={treatementRef}>
         <Treatement />
       </div>
-      <Reviews/>
+      <div ref={reviewRef}>
+        <Reviews />
+      </div>
       <div ref={tipsRef}>
         <Tips />
       </div>
