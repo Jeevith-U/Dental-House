@@ -1,5 +1,4 @@
 import React from "react";
-import hospital from "../images/hospital.jpeg";
 
 const Contact = () => {
   return (
