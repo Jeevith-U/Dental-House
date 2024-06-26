@@ -101,9 +101,9 @@ export const ModalityCard = ({ modality, index }) => {
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
     >
-      <p className="text-sm text-center w-full">
+      <div className="text-sm text-center w-full">
         <Tribute link={tribute_link} text={tribute_text} show={cardHovered} />
-      </p>
+      </div>
       <div className="px-4 w-full flex justify-start items-center">
         <img
           src={icon}
