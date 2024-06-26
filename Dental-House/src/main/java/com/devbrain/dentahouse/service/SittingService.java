@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.devbrain.dentahouse.entity.Sitting;
 import com.devbrain.dentahouse.exceptions.PatientNotFoundByIdException;
+import com.devbrain.dentahouse.exceptions.ScheduleNotFoundByIdException;
 import com.devbrain.dentahouse.exceptions.SittingNotFoundByIdException;
+import com.devbrain.dentahouse.mapper.ScheduleMapper;
 import com.devbrain.dentahouse.mapper.SittingMapper;
 import com.devbrain.dentahouse.repository.PatientRepository;
 import com.devbrain.dentahouse.repository.SittingRepository;
@@ -38,37 +40,27 @@ public class SittingService {
 		return ResponseEntity.status(HttpStatus.CREATED).body(sittingMapper.mapToSittingResponse(sitting)) ;
 	}
 	
-	public ResponseEntity<SittingResponse> getSitting( String patientId, String sittingId){
+	public ResponseEntity<SittingResponse> getSitting( String sittingId){
 		
-		return patientRepository.findById(patientId)
-				.map(patient -> patient.getSittingList().stream()
-				.filter(sitting -> sitting.getSittingId().equals(sittingId))
-				.findFirst()
-				.map(schedule -> ResponseEntity.ok(sittingMapper.mapToSittingResponse(schedule)))
-				.orElseThrow(() -> new SittingNotFoundByIdException("Unable find the sitting")))
-				
-				.orElseThrow(() -> new PatientNotFoundByIdException("Unable To find Patient")) ;
-				
+			return sittingRepository.findById(sittingId).map(schedule ->
+			ResponseEntity.status(HttpStatus.OK)
+			.body(sittingMapper.mapToSittingResponse(schedule))) 
+					.orElseThrow(() -> new ScheduleNotFoundByIdException("Unable to find the Schedule")) ;
 		
 	}
 	
-	public ResponseEntity<SittingResponse> updateSittingResponse(SittingRequest sittingRequest, String patientId, String sittingId) {
-	    return patientRepository.findById(patientId)
-	            .map(patient -> {
-	                Sitting sitting = patient.getSittingList().stream()
-	                        .filter(s -> s.getSittingId().equals(sittingId))
-	                        .findFirst()
-	                        .orElseThrow(() -> new SittingNotFoundByIdException("Unable to find the sitting"));
-
-	                sitting.setSittingDate(sittingRequest.getSittingDate());
-	                sitting.setSittingTime(sittingRequest.getSittingTime());
-
-	                sittingRepository.save(sitting);
-	                patientRepository.save(patient);
-
-	                return ResponseEntity.ok(sittingMapper.mapToSittingResponse(sitting));
-	            })
-	            .orElseThrow(() -> new PatientNotFoundByIdException("Unable to find Patient"));
+	public ResponseEntity<SittingResponse> updateSittingResponse(SittingRequest sittingRequest, String sittingId) {
+	    
+		return sittingRepository.findById(sittingId)
+				.map(sitting -> {
+		
+				Sitting sittings = sittingMapper.mapToSitting(sittingRequest, sitting ) ;
+				
+				sittingRepository.save(sittings) ;
+				
+				return ResponseEntity.ok(sittingMapper.mapToSittingResponse(sittings)) ;
+				}).orElseThrow(() -> new ScheduleNotFoundByIdException("Unable to update schedule")) ;
+				
 	}
 
 	

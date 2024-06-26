@@ -29,14 +29,14 @@ public class SittingController {
 		return sittingService.addSitting(sittingRequest, patientId);
 	}
 	
-	@GetMapping("/sitting/{patientId}/{sittingId}")
-	public ResponseEntity<SittingResponse> getSchedule(@PathVariable String patientId, @PathVariable String sittingId){
-		return sittingService.getSitting(patientId, sittingId) ;
+	@GetMapping("/sitting/{sittingId}")
+	public ResponseEntity<SittingResponse> getSchedule( @PathVariable String sittingId){
+		return sittingService.getSitting( sittingId) ;
 	}
 	
-	@PutMapping("/sitting/{patientId}/{sittingId}")
-	public ResponseEntity<SittingResponse> updateSchedule(@PathVariable String patientId, @PathVariable String sittingId, SittingRequest sittingRequest){
-		return sittingService.updateSittingResponse(sittingRequest, patientId, sittingId) ;
+	@PutMapping("/sitting/{sittingId}")
+	public ResponseEntity<SittingResponse> updateSchedule( @PathVariable String sittingId, SittingRequest sittingRequest){
+		return sittingService.updateSittingResponse(sittingRequest, sittingId) ;
 	}
 
 }
