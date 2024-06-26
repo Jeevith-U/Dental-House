@@ -35,7 +35,7 @@ export const Reviews = () => {
 
   return (
     <div
-      className={`w-screen h-screen bg-smile bg-cover mt-14 flex flex-col justify-center items-center pb-4 transfor transition-all duration-300 overflow-visible`}
+      className={`w-screen h-screen bg-smile bg-cover bg-no-repeat mt-14 flex flex-col justify-center items-center pb-4 transfor transition-all duration-300 overflow-visible`}
     >
       <div className="w-11/12 h-full flex flex-col justify-center items-center text-slate-700 absolute z-10 overflow-visible">
         <div className="grid grid-flow-col grid-rows-2 gap-8 overflow-visible p-10">
