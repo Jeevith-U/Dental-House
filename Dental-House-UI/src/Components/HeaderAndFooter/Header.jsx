@@ -3,7 +3,7 @@ import logo from "../images/logo.jpg";
 
 const Header = ({ scrollToSection, refs }) => {
   return (
-      <header className="bg-bg-blue text-gray-700 fixed z-50 w-full flex justify-center items-center font-cormorant-garamond">
+      <header className="py-0.5 bg-bg-blue shadow-sm text-gray-700 fixed z-50 w-full flex justify-center items-center font-cormorant-garamond">
         <div className="w-11/12 py-1 flex justify-between items-center">
           <div className="flex items-center">
             <div className="border-r-2 border-slate-50 pr-2">

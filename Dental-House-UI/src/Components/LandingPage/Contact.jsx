@@ -5,9 +5,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-screen text-slate-800 flex flex-col justify-center items-start bg-gray-100 pt-10"
+      className="w-full h-screen text-slate-800 flex flex-col justify-center items-center bg-gray-100 pt-10"
     >
-      <div className="w-11/12 px-6 py-4 flex justify-center items-start bg-opacity-55">
+      <div className="w-11/12 px-10 py-4 flex justify-center items-start bg-opacity-55">
         <div className="w-3/6 flex justify-center items-center">
           <div className="w-5/6 mt-12 mr-auto h-96 flex justify-center items-center rounded-xl border-2 border-slate-700">
             {/* <img src={hospital} className="h-full rounded-lg" /> */}
@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
               <textarea
                 placeholder="Do you have anything to say? (optional)"
-                className="w-full h-32 px-2 py-3 mt-4 bg-transparent border-2 border-slate-700 rounded-lg placeholder:text-slate-500 text-slate-800 text-sm"
+                className="w-full h-32 px-2 py-3 mt-4 bg-transparent border-2 border-bg-dark rounded-lg placeholder:text-slate-500 text-slate-800 text-sm"
               />
               <button
                 className="bg-star-blue hover:bg-emerald-400 hover:border-emerald-400 text-slate-50 mt-6 py-2 px-8 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out ml-auto border-2 border-transparent hover:border-star-blue"
@@ -53,7 +53,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="h-16 w-full text-slate-400 flex justify-center items-start bg-bg-dark">
+      <div className="h-16 w-full mt-auto text-slate-400 flex justify-center items-start bg-bg-dark">
         <p className="mt-auto mb-2">
           The Dental House, we perfect your smile ❤️ Dr. Varsha Gupta - Dental
           surgeon
@@ -79,7 +79,7 @@ export const Input = ({ placeholder }) => {
     <input
       type="text"
       placeholder={placeholder}
-      className="outline-none mr-1 px-2 py-3 bg-transparent border-2 rounded-lg border-gray-700 w-full placeholder:text-slate-500 text-slate-800"
+      className="outline-none mr-1 px-2 py-3 bg-transparent border-2 rounded-lg border-bg-dark w-full placeholder:text-slate-500 text-slate-800"
     />
   );
 };
