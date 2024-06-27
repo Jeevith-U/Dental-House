@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import implant from "../../../public/images/dental-implant.png";
-import cleaning from "../../../public/images/tooth-brush.png";
-import filling from "../../../public/images/cavity.png";
-import rootcanal from "../../../public/images/rootcanal.png";
-import denture from "../../../public/images/denture.png";
-import braces from "../../../public/images/braces.png";
+import implant from "/images/dental-implant.png";
+import cleaning from "/images/tooth-brush.png";
+import filling from "/images/cavity.png";
+import rootcanal from "/images/rootcanal.png";
+import denture from "/images/denture.png";
+import braces from "/images/braces.png";
 import { GoInfo } from "react-icons/go";
 
 const Treatement = () => {
