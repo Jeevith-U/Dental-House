@@ -13,6 +13,8 @@
 	<artifactId>Dental-House</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Dental-House</name>
+	<packaging>jar</packaging>
+	
 	<description>Freelance Dentist project for Dr. Varsha Gupta</description>
 	<properties>
 		<java.version>21</java.version>

@@ -1,7 +1,5 @@
 package com.devbrain.dentahouse.service;
 
-import com.devbrain.dentahouse.mapper.PatientMapper;
-
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -9,13 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.devbrain.dentahouse.entity.Schedule;
-import com.devbrain.dentahouse.exceptions.PatientNotFoundByIdException;
 import com.devbrain.dentahouse.exceptions.ScheduleNotFoundByIdException;
 import com.devbrain.dentahouse.mapper.ScheduleMapper;
 import com.devbrain.dentahouse.repository.PatientRepository;
 import com.devbrain.dentahouse.repository.ScheduleRepository;
 import com.devbrain.dentahouse.requestdto.ScheduleRequest;
-import com.devbrain.dentahouse.responsedto.PatientResponse;
 import com.devbrain.dentahouse.responsedto.ScheduleResponse;
 
 import lombok.AllArgsConstructor;
