@@ -33,8 +33,9 @@ public class PatientController {
         return patientService.getPatientDetails(patientId);
     }
     
-    @GetMapping("/patients/details/contactNumber/{patientId}")
+    @GetMapping("/patients/details/contactNumber/{contactNumber}")
     public ResponseEntity<PatientDetailsResponse> getPatientDetailsByContactNumber(@PathVariable Long contactNumber){
+    	System.out.println(contactNumber);
         return patientService.getPatientDetailsByContactNumber(contactNumber);
     }
 

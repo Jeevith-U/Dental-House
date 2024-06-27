@@ -60,6 +60,9 @@ public class PatientService {
      * The Return type PatientDetailResponse
      */
     public ResponseEntity<PatientDetailsResponse> getPatientDetailsByContactNumber(Long contactNumber) {
+    	
+    	System.out.println(contactNumber);
+    	
         return patientRepository.findByContactNumber(contactNumber).map(patient -> ResponseEntity
                         .status(HttpStatus.FOUND)
                         .body(patientDetailsMapper.mapToPatientDetailResponse(patient)))
