@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.jpg";
+import logo from "../../../public/images/logo.svg";
 
 const Header = ({ scrollToSection, refs }) => {
   return (
@@ -11,8 +11,6 @@ const Header = ({ scrollToSection, refs }) => {
             </div>
             <div className="flex flex-col text-3xl px-2 font-extrabold font-comfortaa">
               <p>Dental House</p>
-              {/* <span className="px-2">Dental</span>
-              <span className="px-2">House</span> */}
             </div>
           </div>
           <nav className="font-comfortaa">
@@ -20,8 +18,8 @@ const Header = ({ scrollToSection, refs }) => {
               <li onClick={() => scrollToSection(refs.landingpageRef)}>Home</li>
               <li onClick={() => scrollToSection(refs.aboutRef)}>About Us</li>
               <li onClick={() => scrollToSection(refs.treatementRef)}>Modalities</li>
-              {/* <li onClick={() => scrollToSection(refs.tipsRef)}>Education</li> */}
-              <li onClick={() => scrollToSection(refs.contactRef)}>Reviews</li>
+              <li onClick={() => scrollToSection(refs.reviewRef)}>Reviews</li>
+              <li onClick={() => scrollToSection(refs.contactRef)}>Contact us</li>
             </ul>
           </nav>
         </div>

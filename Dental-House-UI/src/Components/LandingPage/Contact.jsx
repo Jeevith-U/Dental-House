@@ -1,5 +1,4 @@
 import React from "react";
-import hospital from "../images/hospital.jpeg";
 
 const Contact = () => {
   return (
@@ -44,7 +43,7 @@ const Contact = () => {
                 className="w-full h-32 px-2 py-3 mt-4 bg-transparent border-2 border-bg-dark rounded-lg placeholder:text-slate-500 text-slate-800 text-sm"
               />
               <button
-                className="bg-star-blue hover:bg-emerald-400 hover:border-emerald-400 text-slate-50 mt-6 py-2 px-8 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out ml-auto border-2 border-transparent hover:border-star-blue"
+                className="bg-star-blue hover:bg-emerald-400 text-slate-50 mt-6 py-2 px-8 rounded-lg font-body font-extrabold transition-colors duration-300 ease-in-out ml-auto border-2 border-transparent hover:border-emerald-400"
                 type="button"
               >
                 Submit

@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../images/profile.png"
+import profile from "/images/profile.png"
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-opacity-40 text-slate-800 flex justify-center">
@@ -24,7 +24,7 @@ const Landingpage = () => {
               </p>
             </div>
             <button
-              className="bg-star-blue hover:bg-emerald-400 hover:border-emerald-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-star-blue transition-colors duration-300 ease-in-out"
+              className="bg-star-blue hover:bg-emerald-400 text-slate-50 py-2 px-4 rounded-lg font-body font-extrabold border-2 border-transparent hover:border-emerald-400 transition-colors duration-300 ease-in-out"
               type="button"
             >
               Request Appointment

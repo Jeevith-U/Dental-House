@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import implant from "../images/dental-implant.png";
-import cleaning from "../images/tooth-brush.png";
-import filling from "../images/cavity.png";
-import rootcanal from "../images/rootcanal.png";
-import denture from "../images/denture.png";
-import braces from "../images/braces.png";
+import implant from "/images/dental-implant.png";
+import cleaning from "/images/tooth-brush.png";
+import filling from "/images/cavity.png";
+import rootcanal from "/images/rootcanal.png";
+import denture from "/images/denture.png";
+import braces from "/images/braces.png";
 import { GoInfo } from "react-icons/go";
 
 const Treatement = () => {
@@ -101,9 +101,9 @@ export const ModalityCard = ({ modality, index }) => {
       onMouseEnter={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
     >
-      <p className="text-sm text-center w-full">
+      <div className="text-sm text-center w-full">
         <Tribute link={tribute_link} text={tribute_text} show={cardHovered} />
-      </p>
+      </div>
       <div className="px-4 w-full flex justify-start items-center">
         <img
           src={icon}
