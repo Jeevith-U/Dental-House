@@ -19,7 +19,7 @@ const Forms = () => {
       <div className='absolute right-0 top-0 h-full w-1/3 flex items-center justify-center'>
         <img src={image} alt="Form Side" className='max-w-full h-auto' />
       </div>
-      <div className='relative min-h-screen bg-white bg-opacity-80 flex items-center justify-center'>
+      <div className='relative min-h-screen '>
         <Formik
           initialValues={{
             name: '',
@@ -35,7 +35,7 @@ const Forms = () => {
           }}
         >
           {() => (
-            <Form className='p-8 bg-white rounded shadow-md w-full max-w-lg'>
+            <Form className='p-8  rounded shadow-md w-full max-w-lg'>
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700">

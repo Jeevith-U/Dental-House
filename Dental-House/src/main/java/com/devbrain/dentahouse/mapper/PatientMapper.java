@@ -37,4 +37,22 @@ public class PatientMapper {
                 .registeredDate(patient.getRegisteredDate())
                 .build();
     }
+    
+    public PatientResponse mapToPatientDetailResponse(Patient patient) {
+        return PatientResponse.builder()
+                .patientId(patient.getPatientId())
+                .bloodGroup(patient.getBloodGroup())
+                .contactNumber(patient.getContactNumber())
+                .dateOfBirth(patient.getDateOfBirth())
+                .firstName(patient.getFirstName())
+                .gender(patient.getGender())
+                .lastName(patient.getLastName())
+                .lastSittingDate(patient.getLastSittingDate())
+                .note(patient.getNote())
+                .preMedicalConditions(patient.getPreMedicalConditions())
+                .registeredDate(patient.getRegisteredDate())
+                .build();
+    }
+    
+    
 }
