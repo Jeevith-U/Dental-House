@@ -2,9 +2,11 @@ package com.devbrain.dentahouse.service;
 
 import com.devbrain.dentahouse.entity.Patient;
 import com.devbrain.dentahouse.exceptions.PatientNotFoundByIdException;
+import com.devbrain.dentahouse.mapper.PatientDetailsMapper;
 import com.devbrain.dentahouse.mapper.PatientMapper;
 import com.devbrain.dentahouse.repository.PatientRepository;
 import com.devbrain.dentahouse.requestdto.PatientRequest;
+import com.devbrain.dentahouse.responsedto.PatientDetailsResponse;
 import com.devbrain.dentahouse.responsedto.PatientResponse;
 import com.devbrain.dentahouse.util.PageResponseStructure;
 import lombok.AllArgsConstructor;
@@ -21,6 +23,7 @@ public class PatientService {
 
     private final PatientRepository patientRepository;
     private final PatientMapper patientMapper;
+    private final PatientDetailsMapper patientDetailsMapper ;
 
     public ResponseEntity<PatientResponse> addPatient(PatientRequest patientRequest) {
         Patient patient = patientMapper.mapToPatient(patientRequest, new Patient());
@@ -37,6 +40,36 @@ public class PatientService {
                         .body(patientMapper.mapToPatientResponse(patient)))
                 .orElseThrow(() -> new PatientNotFoundByIdException("Failed to find the patient"));
     }
+    
+    /*
+     * This Method Is to get complete patient details Including the sitting and Schedules
+     * The input parameter is patientId
+     * The Return type PatientDetailResponse
+     */
+    public ResponseEntity<PatientDetailsResponse> getPatientDetails(String patientId) {
+        return patientRepository.findById(patientId).map(patient -> ResponseEntity
+                        .status(HttpStatus.FOUND)
+                        .body(patientDetailsMapper.mapToPatientDetailResponse(patient)))
+                .orElseThrow(() -> new PatientNotFoundByIdException("Failed to find the patient"));
+    }
+    
+    
+    /*
+     * This Method Is to get complete patient details Including the sitting and Schedules
+     * The input parameter is patient phone Number
+     * The Return type PatientDetailResponse
+     */
+    public ResponseEntity<PatientDetailsResponse> getPatientDetailsByContactNumber(Long contactNumber) {
+    	
+    	System.out.println(contactNumber);
+    	
+        return patientRepository.findByContactNumber(contactNumber).map(patient -> ResponseEntity
+                        .status(HttpStatus.FOUND)
+                        .body(patientDetailsMapper.mapToPatientDetailResponse(patient)))
+                .orElseThrow(() -> new PatientNotFoundByIdException("Failed to find the patient"));
+    }
+    
+    
 
     public ResponseEntity<PatientResponse> updatePatient(PatientRequest patientRequest, String patientId) {
         return patientRepository.findById(patientId).map(patient -> {

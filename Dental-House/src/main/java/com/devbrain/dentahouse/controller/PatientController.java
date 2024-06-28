@@ -1,6 +1,7 @@
 package com.devbrain.dentahouse.controller;
 
 import com.devbrain.dentahouse.requestdto.PatientRequest;
+import com.devbrain.dentahouse.responsedto.PatientDetailsResponse;
 import com.devbrain.dentahouse.responsedto.PatientResponse;
 import com.devbrain.dentahouse.service.PatientService;
 import com.devbrain.dentahouse.util.PageResponseStructure;
@@ -25,6 +26,17 @@ public class PatientController {
     @GetMapping("/patients/{patientId}")
     public ResponseEntity<PatientResponse> getPatientById(@PathVariable String patientId){
         return patientService.getPatient(patientId);
+    }
+    
+    @GetMapping("/patients/details/{patientId}")
+    public ResponseEntity<PatientDetailsResponse> getPatientDetailsById(@PathVariable String patientId){
+        return patientService.getPatientDetails(patientId);
+    }
+    
+    @GetMapping("/patients/details/contactNumber/{contactNumber}")
+    public ResponseEntity<PatientDetailsResponse> getPatientDetailsByContactNumber(@PathVariable Long contactNumber){
+    	System.out.println(contactNumber);
+        return patientService.getPatientDetailsByContactNumber(contactNumber);
     }
 
     @PutMapping("/patients/{patientId}")
