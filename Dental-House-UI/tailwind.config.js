@@ -28,23 +28,13 @@ export default {
       },
       colors:{
         "blue_gray": "#30526D",
-        // "bg-blue": "#eaf8fe",
         "bg-blue": "#ddf2ee",
-        // "bg-blue": "#d2e6f0",
-        "profile-bg": '#A8B1CC',
-        // "star-blue": "#2da9ea",
         "star-blue": "#14c37e",
         "bg-orange": "#FF822E",
         "bg-gray": "#f5f5f5",
         "bg-dark": "#012f33"
       },
       fontFamily:{
-        "great-vibes": ["Great Vibes", "cursive"],
-        "cormorant-garamond": ["Cormorant Garamond", "serif"],
-        "caveat": ["Caveat", "cursive"],
-        "open-sans": ["Open Sans", "sans-serif"],
-        "poppins": ["Poppins", "sans-serif"],
-        "comfortaa": ["Comfortaa", "sans-serif"],
         "head": ["Cormorant Garamond", "serif"],
         "body": ["Comfortaa", "sans-serif"]
       },
