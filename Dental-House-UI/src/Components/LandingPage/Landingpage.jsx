@@ -1,18 +1,26 @@
 import React from "react";
-import profile from "/images/profile.png"
+import profile from "/images/profile.png";
+import { motion } from "framer-motion";
+
 const Landingpage = () => {
   return (
     <div className="h-screen w-full min-h-screen bg-opacity-40 text-slate-800 flex justify-center">
       <div className="h-full w-full flex justify-center items-center bg-bg1 bg-cover">
         <div className="mt-8 flex w-11/12 h-max justify-center items-center">
-          <div className="w-3/5 px-10">
-              <h1 className="text-6xl h-20 font-medium w-full font-head">
-                Dr. Varsha Gupta
-              </h1>
+          {/* <RevealFromLeft> */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-3/5 px-10"
+          >
+            <h1 className="text-6xl h-20 font-medium w-full font-head">
+              Dr. Varsha Gupta
+            </h1>
             <div className="w-full py-2 mb-10">
               <p className="text-2xl font-medium mb-2 font-head">
-                Dental surgeon <span className="text-star-blue">|</span> Bachelor
-                Of Dental Surgery (BDS)
+                Dental surgeon <span className="text-star-blue">|</span>{" "}
+                Bachelor Of Dental Surgery (BDS)
               </p>
               <p className="text-sm font-body">
                 Dr. Varsha is a dedicated and compassionate dental surgeon with
@@ -29,8 +37,13 @@ const Landingpage = () => {
             >
               Request Appointment
             </button>
-          </div>
-          <div className="w-2/5 h-full flex flex-col items-center justify-end">
+          </motion.div>
+          {/* </RevealFromLeft> */}
+          <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-2/5 h-full flex flex-col items-center justify-end">
             <div className="flex h-1/6 justify-end items-end mb-1 mr-24">
               <div className="p-2 mb-4 mr-2 bg-slate-700 rounded-full h-max opacity-70"></div>
               <div className="p-6 bg-white opacity-80 rounded-full h-max"></div>
@@ -44,7 +57,7 @@ const Landingpage = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

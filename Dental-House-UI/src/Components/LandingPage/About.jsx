@@ -5,13 +5,13 @@ const About = () => {
   return (
     <div className="w-full bg-bg-gray flex flex-col justify-center items-center py-10">
       <div className="w-11/12 h-max mb-4 flex flex-col justify-center items-center text-slate-700">
-        <p className="text-5xl font-semibold mb-10 font-head h-16">
+        <p className="text-5xl font-semibold my-10 font-head h-16">
           Why choose dental house?
         </p>
         <div className="flex justify-center items-center">
-          <div className="px-4 w-full h-full flex flex-col justify-center items-center font-body font-extrabold">
-            <div className="flex w-full h-full justify-evenly items-center">
-              <ul className="flex w-full h-full flex-col justify-evenly items-stretch">
+          <div className="px-4 w-full h-max flex flex-col justify-center items-center font-body font-extrabold">
+            <div className="flex w-full h-max justify-evenly items-center overflow-y-visible">
+              <ul className="flex w-full h-max flex-col justify-evenly items-stretch">
                 <Card
                   text={"Finest Dental Care"}
                   desc={
@@ -60,46 +60,43 @@ const About = () => {
             </div>
           </div>
           <div className="flex w-11/12 flex-row-reverse justify-center items-center">
-            <div>
-              <div className="px-8 w-full flex flex-col font-body text-center text-md justify-center items-center">
-                <p>
-                  The finest dental care to our patients in Mysore, providing a
-                  high quality dental treatment in a tranquil, relaxed and
-                  friendly environment.
-                </p>
-                <p className="mt-4 mb-4 text-2xl  font-extrabold text-slate-700">
-                  {/* <span className="text-slate-700 text-3xl">{"[ "}</span> */}
-                  <span>
-                    If you are seeking
-                    <TypeAnimation
-                      sequence={[
-                        " quality",
-                        2000,
-                        " ethical standards",
-                        3000,
-                        " value for your time",
-                        3000,
-                      ]}
-                      wrapper="span"
-                      speed={30}
-                      repeat={Infinity}
-                      className="text-bg-orange"
-                    />
-                  </span>
-                  <br />
-                  <span className="text-slate-700">
-                    {" "}
-                    then Dental House is the perfect choice for you.
-                  </span>
-                </p>
-                <p>
-                  Our passion lies in crafting beautiful smiles, and we have had
-                  the privilege of transforming the smiles of hundreds of
-                  patients. Our commitment to excellence and personalized care
-                  guarantees that each individual leaves our clinic with
-                  enhanced confidence and complete satisfaction.
-                </p>
-              </div>
+            <div className="px-8 w-full flex flex-col font-body text-center text-md justify-center items-center">
+              <p>
+                The finest dental care to our patients in Mysore, providing a
+                high quality dental treatment in a tranquil, relaxed and
+                friendly environment.
+              </p>
+              <p className="mt-4 mb-4 text-2xl  font-extrabold text-slate-700">
+                <span>
+                  If you are seeking
+                  <TypeAnimation
+                    sequence={[
+                      " quality",
+                      2000,
+                      " ethical standards",
+                      3000,
+                      " value for your time",
+                      3000,
+                    ]}
+                    wrapper="span"
+                    speed={30}
+                    repeat={Infinity}
+                    className="text-bg-orange"
+                  />
+                </span>
+                <br />
+                <span className="text-slate-700">
+                  {" "}
+                  then Dental House is the perfect choice for you.
+                </span>
+              </p>
+              <p>
+                Our passion lies in crafting beautiful smiles, and we have had
+                the privilege of transforming the smiles of hundreds of
+                patients. Our commitment to excellence and personalized care
+                guarantees that each individual leaves our clinic with enhanced
+                confidence and complete satisfaction.
+              </p>
             </div>
           </div>
         </div>
@@ -112,6 +109,7 @@ export default About;
 
 export const Card = ({ text, image, desc }) => {
   const [cardHovered, setCardHovered] = useState(false);
+
   return (
     <li
       className={`flex justify-start items-end h-32 mx-3 my-2 shadow-md overflow-y-hidden ${image} bg-cover`}

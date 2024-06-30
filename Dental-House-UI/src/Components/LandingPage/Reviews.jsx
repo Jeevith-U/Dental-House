@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import RevealOnScroll from "../Util/RevealOnScroll";
 
 export const Reviews = () => {
   const reviews = [
@@ -40,7 +41,11 @@ export const Reviews = () => {
       <div className="w-11/12 h-full flex flex-col justify-center items-center text-slate-700 absolute z-10 overflow-visible">
         <div className="grid grid-flow-col grid-rows-2 gap-8 overflow-visible p-10">
           {reviews.map((item, index) => {
-            return <ReviewCard item={item} key={index} />;
+            return (
+              <RevealOnScroll key={index}>
+                <ReviewCard item={item} />
+              </RevealOnScroll>
+            );
           })}
         </div>
         <a

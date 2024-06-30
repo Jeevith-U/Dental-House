@@ -19,7 +19,7 @@ export default {
         'diet': 'url(https://images.unsplash.com/photo-1561043433-aaf687c4cf04?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'tobacco': 'url(https://images.unsplash.com/photo-1567021185300-23afa08f68ad?q=80&w=3437&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
         'dentist': 'url(https://images.unsplash.com/photo-1684607633062-b31b5d134814?q=80&w=3862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
-        'bg1': 'url(./images/bg1.png)',
+        'bg1': 'url(./images/bg1.webp)',
         'smile': 'url(./images/review_bg.png)',
         'pr1': "url(./images/pr1.svg)",
         'pr2': "url(./images/pr4.svg)",

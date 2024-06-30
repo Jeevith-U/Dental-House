@@ -6,6 +6,7 @@ import rootcanal from "/images/rootcanal.png";
 import denture from "/images/denture.png";
 import braces from "/images/braces.png";
 import { GoInfo } from "react-icons/go";
+import RevealOnScroll from "../Util/RevealOnScroll";
 
 const Treatement = () => {
   const modalities = [
@@ -72,7 +73,9 @@ const Treatement = () => {
           <div className="grid grid-rows-2 grid-flow-col-dense gap-8 w-11/12 py-10 overflow-visible">
             {/* ITERATING OVER THE LIST OF MODALITIES */}
             {modalities.map((modality, key) => (
-              <ModalityCard modality={modality} key={key} index={key} />
+              <RevealOnScroll key={key} >
+                <ModalityCard modality={modality} index={key} />
+              </RevealOnScroll>
             ))}
           </div>
         </div>
