@@ -16,14 +16,9 @@ const VisitorLayout = () => {
   const contactRef = useRef(null);
   const reviewRef = useRef(null);
 
-  const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
       <Header
-        scrollToSection={scrollToSection}
         refs={{
           landingpageRef,
           aboutRef,

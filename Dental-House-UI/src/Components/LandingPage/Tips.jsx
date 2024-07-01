@@ -71,7 +71,7 @@ const Tips = () => {
             {tips.map((tip, index) => {
               const { headline, explainer, bg } = tip;
               return (
-                  <TipsCard headline={headline} explainer={explainer} bg={bg} />
+                  <TipsCard key={index} headline={headline} explainer={explainer} bg={bg} />
               );
             })}
           </div>
